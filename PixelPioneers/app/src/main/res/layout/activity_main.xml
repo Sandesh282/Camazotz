@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,93 +7,123 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:background="@drawable/bg1"
+    android:background="@color/blue"
     android:gravity="center">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15px"
         android:gravity="center"
         android:text="MINDSPARK"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="410dp"
         android:layout_height="420dp"
         android:layout_gravity="center"
-        app:cardCornerRadius="20sp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="center">
+        app:cardCornerRadius="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-
-        <EditText
-            android:id="@+id/y2y3273ygq87rfbq"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Enter operator" />
-        <EditText
-            android:id="@+id/gyyiuwhuihiu12"
-            android:layout_width="169dp"
-            android:layout_height="60dp"
-            android:hint="ENTER A NUMBER" />
-        <EditText
-            android:id="@+id/gyyiuwhuihiv12"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:hint="ENTER SECOND NUMBER"/>
-
-
-        <Button
-            android:id="@+id/ajbjhbdlbduibdiubi"
-            android:layout_width="124dp"
-            android:layout_height="62dp"
-            android:gravity="center"
-            android:text="=" />
-
-
-        <LinearLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/bg1"
+            android:gravity="center"
+            android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/hddguruyghiuh"
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/buutton_bg"
-                        android:layout_marginRight="75dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/logo1" />
 
-                    <ImageButton
-                        android:id="@+id/hddguruyghivh"
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/buutton_bg"
-                        android:layout_marginLeft="220dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/logo1" />
-        </LinearLayout>
+            <EditText
+                android:id="@+id/operator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="28dp"
+                android:hint="Enter operator"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    </LinearLayout>
+            <EditText
+                android:id="@+id/op1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="ENTER A NUMBER"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/operator" />
 
+            <EditText
+                android:id="@+id/op2"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:hint="ENTER SECOND NUMBER"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/op1" />
+
+            <Button
+                android:id="@+id/equals"
+                android:layout_width="124dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="="
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/op2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@+id/equals"
+                tools:layout_editor_absoluteX="0dp">
+
+                <ImageButton
+                    android:id="@+id/hddguruyghiuh"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="75dp"
+                    android:background="@drawable/buutton_bg"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo1" />
+
+                <ImageButton
+                    android:id="@+id/hddguruyghivh"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="220dp"
+                    android:background="@drawable/buutton_bg"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo1" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.cardview.widget.CardView>
+
     <Button
-        android:id="@+id/y93809109fj0n0"
-        android:layout_marginTop="14dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/learnBtn"
+        android:layout_width="370dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="64dp"
         android:text="Start Learning"
-        android:textStyle="bold"
-        android:textSize="38sp"/>
-</LinearLayout>
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
 
 
