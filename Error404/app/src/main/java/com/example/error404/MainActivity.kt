@@ -1,3 +1,5 @@
+//Cancel button no usecase
+
 package com.example.error404
 
 import android.content.Intent
@@ -16,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnConfirm = findViewById<Button>(R.id.btnConfirm)
-        val btnCancel = findViewById<Button>(R.id.btnCancel)
+//        val btnCancel = findViewById<Button>(R.id.btnCancel)
         val btnAccept = findViewById<Button>(R.id.btnAccept)
         val btnReject = findViewById<Button>(R.id.btnReject)
 
@@ -28,10 +30,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, page3::class.java)
             startActivity(intent)
         }
-        btnCancel.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
+//        btnCancel.setOnClickListener {
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//        }
         btnReject.setOnClickListener {
             val intent = Intent(this, page4::class.java)
             startActivity(intent)
