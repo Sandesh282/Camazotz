@@ -21,7 +21,7 @@ class SplashActivity : AppCompatActivity() {
         Glide.with(this@SplashActivity)
             .asGif()
             .load(R.drawable.loginnnn)
-            .into(binding.yewwhkuhiduhdq)
+            .into(binding.image)
 
         val mediaPlayer = MediaPlayer.create(this, R.raw.dance)
         mediaPlayer.start()
