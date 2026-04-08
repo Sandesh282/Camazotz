@@ -117,170 +117,153 @@ struct ContentView2: View {
     @State private var searchCity: String = ""
     
     var body: some View {
-        
-        NavigationStack{
+        NavigationStack {
             ZStack {
-                Image("Image 3")
-                    .resizable() .scaledToFit()
                 
-                    .ignoresSafeArea()
+                LinearGradient(colors: [Color.blue.opacity(0.7), Color.purple.opacity(0.7)],
+                               startPoint: .top,
+                               endPoint: .bottom)
+                .ignoresSafeArea()
                 
-                VStack {
+                VStack(spacing: 20) {
                     
                     HStack {
                         Image(systemName: "magnifyingglass")
-                            .foregroundColor(.red.opacity(0.7))
-                        TextField("Search for a STATE...`", text: $searchCity)
-                            .foregroundColor(.black)
+                            .foregroundColor(.white.opacity(0.7))
+                        
+                        TextField("Search city", text: $searchCity)
+                            .foregroundColor(.white)
                             .onSubmit {
                                 Task { await viewModel.fetchWeather(for: searchCity) }
                             }
                     }
                     .padding()
-                    .background(Color.purple)
+                    .background(Color.white.opacity(0.15))
+                    .cornerRadius(12)
                     .padding(.horizontal)
                     
                     if viewModel.isLoading {
                         Spacer()
                         ProgressView()
-                            .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                            .scaleEffect(1.5)
+                            .tint(.white)
                         Spacer()
                     } else if let errorMessage = viewModel.errorMessage {
                         Spacer()
-                        Text(errorMessage).foregroundColor(.white)
+                        Text(errorMessage)
+                            .foregroundColor(.white)
                         Spacer()
                     } else if let weather = viewModel.weather {
+                        
                         ScrollView(showsIndicators: false) {
-                            VStack(spacing: 20) {
+                            
+                            VStack(spacing: 25) {
+                                
                                 VStack(spacing: 5) {
                                     Text(viewModel.cityName)
-                                        .font(.system(size: 36, weight: .regular))
-                                        .foregroundColor(.black)
+                                        .font(.title)
+                                        .foregroundColor(.white)
                                     
                                     Text("\(Int(weather.current_weather.temperature))°")
-                                        .font(.system(size: 96, weight: .thin))
+                                        .font(.system(size: 70, weight: .thin))
                                         .foregroundColor(.white)
                                     
                                     Text(getWeatherDescription(code: weather.current_weather.weathercode))
-                                        .font(.title3)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(.white.opacity(0.8))
                                     
-                                    HStack(spacing: 15) {
-                                        Text("Lowest:\(Int(weather.daily.temperature_2m_max.first ?? 0))°")
-                                        Text("Highest:\(Int(weather.daily.temperature_2m_min.first ?? 0))°")
+                                    HStack(spacing: 10) {
+                                        Text("L:\(Int(weather.daily.temperature_2m_min.first ?? 0))°")
+                                        Text("H:\(Int(weather.daily.temperature_2m_max.first ?? 0))°")
                                     }
-                                    .font(.title3)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(.white.opacity(0.7))
                                 }
-                                .padding(.top, 20)
                                 
-                                VStack(alignment: .leading) {
-                                    Text("HOURLY FORECAST")
+                                VStack(alignment: .leading, spacing: 10) {
+                                    
+                                    Text("Hourly Forecast")
                                         .font(.caption)
-                                        .foregroundColor(.red.opacity(0.6))
-                                        .padding(.bottom, 5)
+                                        .foregroundColor(.white.opacity(0.7))
                                     
                                     ScrollView(.horizontal, showsIndicators: false) {
-                                        HStack(spacing: 25) {
-                                            
+                                        HStack(spacing: 20) {
                                             ForEach(0..<min(24, weather.hourly.time.count), id: \.self) { index in
-                                                VStack(spacing: 15) {
+                                                VStack(spacing: 10) {
                                                     Text(index == 0 ? "Now" : viewModel.formatTime(isoString: weather.hourly.time[index]))
-                                                        .font(.subheadline)
                                                         .foregroundColor(.white)
+                                                        .font(.caption)
                                                     
                                                     Image(systemName: getWeatherIcon(code: weather.hourly.weathercode[index]))
-                                                        .symbolRenderingMode(.multicolor)
-                                                        .font(.title2)
+                                                        .foregroundColor(.white)
                                                     
                                                     Text("\(Int(weather.hourly.temperature_2m[index]))°")
-                                                        .font(.headline)
                                                         .foregroundColor(.white)
-                                                }}}}}
-                                .frame(width: 400, height:80,)
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                                 .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 25)
-                                        .fill(Color.white.opacity(0.6))
-                                        .shadow(color: .purple, radius: 20))
-                                .cornerRadius(10)
+                                .background(.ultraThinMaterial)
+                                .cornerRadius(15)
                                 .padding(.horizontal)
                                 
-                                VStack(alignment: .leading) {
-                                    HStack {
-                                        Image(systemName: "calendar")
-                                        Text("7-DAY FORECAST")
-                                    }
-                                    .font(.caption)
-                                    .foregroundColor(.black.opacity(0.4))
-                                    .padding(.bottom, 10)
+                                VStack(alignment: .leading, spacing: 10) {
+                                    
+                                    Text("7-Day Forecast")
+                                        .font(.caption)
+                                        .foregroundColor(.white.opacity(0.7))
                                     
                                     ForEach(0..<min(7, weather.daily.time.count), id: \.self) { index in
                                         HStack {
                                             Text(viewModel.formatDay(isoString: weather.daily.time[index]))
-                                                .font(.title3)
-                                                .foregroundColor(.black)
-                                                .frame(width: 60, alignment: .leading)
+                                                .foregroundColor(.white)
                                             
                                             Spacer()
                                             
                                             Image(systemName: getWeatherIcon(code: weather.daily.weathercode[index]))
-                                                .symbolRenderingMode(.multicolor)
-                                                .font(.title2)
+                                                .foregroundColor(.white)
                                             
                                             Spacer()
                                             
                                             Text("\(Int(weather.daily.temperature_2m_min[index]))°")
                                                 .foregroundColor(.white.opacity(0.6))
                                             
-                                            
-                                            Capsule()
-                                                .fill(LinearGradient(colors: [.cyan, .yellow], startPoint: .leading, endPoint: .trailing))
-                                                .frame(width: 80, height: 5)
-                                            
                                             Text("\(Int(weather.daily.temperature_2m_max[index]))°")
-                                                .foregroundColor(.pink)
-                                                .frame(width: 35, alignment: .trailing)
+                                                .foregroundColor(.white)
                                         }
-                                        .padding(.vertical, 8)
-                                        
-                                        if index < 6 {
-                                            Divider().background(Color.red.opacity(0.3))
-                                        }
+                                        .padding(.vertical, 5)
                                     }
                                 }
                                 .padding()
-                                .background(
-                                    RoundedRectangle(cornerRadius: 25)
-                                        .fill(Color.red.opacity(0.6))
-                                        .shadow(color: .purple, radius: 20))
-                                .cornerRadius(10)
+                                .background(.ultraThinMaterial)
+                                .cornerRadius(15)
                                 .padding(.horizontal)
-                                
-                            }}}
+                            }
+                        }
+                    }
+                    
                     if let weather = viewModel.weather {
                         NavigationLink(destination: ContentView3(
                             temperature: weather.current_weather.temperature,
                             weatherCode: weather.current_weather.weathercode
                         )) {
                             Text("Get Today's Suggestion")
-                                .font(.headline)
                                 .foregroundColor(.white)
                                 .frame(maxWidth: .infinity)
                                 .padding()
-                                .background(Color.blue.opacity(0.6))
-                                .cornerRadius(15)
+                                .background(Color.blue)
+                                .cornerRadius(12)
                                 .padding(.horizontal)
-                                .padding(.bottom, 20)
                         }
+                        .padding(.bottom, 10)
                     }
                 }
-            }}
-        
+            }
+        }
         .task {
             await viewModel.fetchWeather(for: searchCity.isEmpty ? "Lucknow" : searchCity)
-        }}
+        }
+    }
+    
     private func getWeatherDescription(code: Int) -> String {
         switch code {
         case 0: return "Clear Sky"
@@ -298,18 +281,14 @@ struct ContentView2: View {
     private func getWeatherIcon(code: Int) -> String {
         switch code {
         case 0: return "sun.max.fill"
-        case 1...3: return "cloud.bolt.rain.fill"
-        case 45, 48: return "cloud.heavyrain.fill"
-        case 51...55: return "cloud.snow.fill"
+        case 1...3: return "cloud.sun.fill"
+        case 45, 48: return "cloud.fog.fill"
+        case 51...55: return "cloud.drizzle.fill"
         case 61...65: return "cloud.rain.fill"
-        case 71...75: return "cloud.drizzle.fill"
-        case 80...82: return "cloud.fog.fill"
-        case 95...99: return "cloud.sun.fill"
+        case 71...75: return "cloud.snow.fill"
+        case 80...82: return "cloud.heavyrain.fill"
+        case 95...99: return "cloud.bolt.rain.fill"
         default: return "cloud.fill"
         }
     }
-    
-}
-#Preview {
-    ContentView()
 }
