@@ -96,7 +96,7 @@ class MainActivity_Constraint : AppCompatActivity() {
                     val intent = Intent(this, Login_Page::class.java)
                     startActivity(intent)
                 }
-                builder.setPositiveButton("Yes"){dialog, which ->
+                builder.setPositiveButton("No"){dialog, which ->
                     dialog.dismiss()
                 }
                 builder.show()
@@ -146,7 +146,7 @@ class MainActivity_Constraint : AppCompatActivity() {
 
             builder.setMessage("Do you want to logout?")
 
-            builder.setNegativeButton("No") { dialog, which ->
+            builder.setNegativeButton("Yes") { dialog, which ->
                 editor.apply{
                     putString("name","")
                     putString("email","")
@@ -179,7 +179,7 @@ class MainActivity_Constraint : AppCompatActivity() {
                 val intent = Intent(this, Login_Page::class.java)
                 startActivity(intent)
             }
-            builder.setPositiveButton("Yes"){dialog, which ->
+            builder.setPositiveButton("No"){dialog, which ->
                 dialog.dismiss()
             }
             builder.show()
