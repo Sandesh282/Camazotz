@@ -35,7 +35,7 @@
 
                 <TextView
                     android:id="@+id/description"
-                    android:layout_width="10dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="Walk into the exam like you’ve already seen the paper."
@@ -43,84 +43,9 @@
                     android:textSize="17sp"
                     android:layout_marginStart="18dp"
                     android:layout_marginEnd="5dp"
-                    app:layout_constraintEnd_toStartOf="@id/imageView"
                     app:layout_constraintStart_toStartOf="@id/view"
                     app:layout_constraintTop_toTopOf="@id/view" />
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="134dp"
-                    android:layout_height="133dp"
-                    android:layout_marginTop="404dp"
-                    android:layout_marginEnd="15dp"
-                    android:src="@drawable/img_2"
-                    app:layout_constraintEnd_toEndOf="@id/view"
-                    app:layout_constraintStart_toEndOf="@id/description"
-                    app:layout_constraintTop_toTopOf="@id/view" />
-
-                <TextView
-                    android:id="@+id/subHeading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:drawableStart="@drawable/outline_border_color_24"
-                    android:drawablePadding="10dp"
-                    android:text="Don't try to touch the UI😒"
-                    android:textSize="19sp"
-                    android:textStyle="bold"
-                    android:textColor="?attr/colorOnSurface"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.327"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/view" />
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardElevation="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/subHeading">
-
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/cardView2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginEnd="10dp"
-                    app:cardCornerRadius="30dp"
-                    app:cardElevation="10dp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/cardView"
-                    app:layout_constraintVertical_bias="0.343">
-
-                </androidx.cardview.widget.CardView>
-
-                <TextView
-                    android:id="@+id/motivationTxt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="4dp"
-                    android:drawablePadding="10dp"
-                    android:text="Today's Damage 🏆"
-                    android:textColor="#F8D406"
-                    android:textSize="19sp"
-                    android:textStyle="bold"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.455"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/cardView2" />
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/motivationCard"
@@ -147,14 +72,14 @@
                     android:background="@drawable/bg_card"
                     android:padding="16dp"
                     tools:layout_editor_absoluteX="-4dp"
-                    tools:layout_editor_absoluteY="65dp">
+                    tools:layout_editor_absoluteY="194dp">
 
                     <ImageView
                         android:id="@+id/dbmsIcon"
                         android:layout_width="30dp"
                         android:layout_height="30dp"
                         android:layout_marginStart="7dp"
-                        android:src="@drawable/baseline_cancel_red"
+                        android:src="@drawable/studying_cuate"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
@@ -163,7 +88,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:text="Database Mosquito System"
+                        android:text="Database Management System"
                         android:textColor="?attr/colorOnBackground"
                         android:textSize="17sp"
                         android:textStyle="bold"
@@ -176,8 +101,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="24 seconds lecture to complete dbms"
-                        android:textColor="#DB856A"
+                        android:text="24 lecture to complete in dbms"
+                        android:textColor="#4B190A"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
@@ -216,8 +141,8 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/bg_card"
                     android:padding="16dp"
-                    tools:layout_editor_absoluteX="16dp"
-                    tools:layout_editor_absoluteY="271dp">
+                    tools:layout_editor_absoluteX="-9dp"
+                    tools:layout_editor_absoluteY="368dp">
 
                     <ImageView
                         android:id="@+id/cttpIcon"
@@ -233,8 +158,8 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
-                        android:text="Computional Thinking Through sleeping"
-                        android:textColor="#B792EF"
+                        android:text="Computional Thinking Through Programming"
+                        android:textColor="#0F0F26"
                         android:textSize="17sp"
                         android:textStyle="bold"
                         app:layout_constraintEnd_toEndOf="parent"
@@ -246,9 +171,9 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
-                        android:text="Don't Practice Importic CTTP Questions"
-                        android:textColor="?attr/colorOnSurfaceVariant"
-                        android:textSize="10sp"
+                        android:text="Practice Important CTTP Questions"
+                        android:textColor="#282133"
+                        android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="0.0"
                         app:layout_constraintStart_toStartOf="parent"
@@ -272,7 +197,7 @@
                         android:backgroundTint="#06172A"
                         android:padding="8dp"
                         android:text="Let's Practice"
-                        android:textColor="@color/dark_bg"
+                        android:textColor="@color/black"
                         android:textSize="14sp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintHorizontal_bias="1.0"
@@ -294,7 +219,7 @@
                         android:id="@+id/textView7"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="Learning gives stress, stress leads to poor health."
+                        android:text="Learning gives creativity, creativity leads to thinking, thinking provides knowledge, knowledge makes you great."
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -314,7 +239,7 @@
                         android:id="@+id/textView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="--- Abu Dhabi"
+                        android:text="--- Dr. A.P.J Abdul Kalam"
                         android:textColor="?attr/colorOnSurface"
                         android:textSize="17sp"
                         android:textStyle="bold"
@@ -322,6 +247,18 @@
                         app:layout_constraintEnd_toEndOf="parent" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/motivationTxt"
+                    android:layout_width="255dp"
+                    android:layout_height="72dp"
+                    android:drawablePadding="10dp"
+                    android:text="    Today's Goals 🏆"
+                    android:textColor="#C0CA33"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="78dp"
+                    tools:layout_editor_absoluteY="66dp" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
