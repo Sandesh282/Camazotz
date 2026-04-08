@@ -24,9 +24,9 @@ class ThirdScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.orderpage)
 
-        val imageView = findViewById<ImageView>(R.id.imageView2)
-        val textView = findViewById<TextView>(R.id.textView6)
-        val imageRes = intent.getIntExtra("image", 0)
+//        val imageView = findViewById<ImageView>(R.id.imageView2)
+//        val textView = findViewById<TextView>(R.id.textView6)
+//        val imageRes = intent.getIntExtra("image", 0)
 
         val Image = findViewById<ImageView>(R.id.imageView2)
         val Name = findViewById<TextView>(R.id.textView6)
@@ -45,6 +45,7 @@ class ThirdScreen : AppCompatActivity() {
         val sharedPref = getSharedPreferences("BookNotes", Context.MODE_PRIVATE)
         val noteKey = "notes_book_$bookId"
 
+
         // Load saved note
         notesEditText.setText(sharedPref.getString(noteKey, ""))
 
@@ -60,7 +61,7 @@ class ThirdScreen : AppCompatActivity() {
 
         val back =findViewById<ImageView>(R.id.backBtn)
         back.setOnClickListener {
-            val intent= Intent(this, MainActivity::class.java)
+            val intent= Intent(this, SecondScreen::class.java)
             startActivity(intent)
         }
 
