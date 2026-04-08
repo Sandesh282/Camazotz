@@ -14,6 +14,7 @@ import android.content.Intent
 import android.text.TextWatcher
 import android.text.Editable
 import com.example.camazotz.MainActivity
+import com.google.android.material.button.MaterialButton
 
 class ThirdScreen : AppCompatActivity() {
     private lateinit var etNote: EditText
@@ -24,9 +25,9 @@ class ThirdScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.orderpage)
 
-        val imageView = findViewById<ImageView>(R.id.imageView2)
-        val textView = findViewById<TextView>(R.id.textView6)
-        val imageRes = intent.getIntExtra("image", 0)
+//        val imageView = findViewById<ImageView>(R.id.imageView2)
+//        val textView = findViewById<TextView>(R.id.textView6)
+//        val imageRes = intent.getIntExtra("image", 0)
 
         val Image = findViewById<ImageView>(R.id.imageView2)
         val Name = findViewById<TextView>(R.id.textView6)
@@ -58,9 +59,9 @@ class ThirdScreen : AppCompatActivity() {
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
         })
 
-        val back =findViewById<ImageView>(R.id.backBtn)
+        val back =findViewById<MaterialButton>(R.id.backBtn)
         back.setOnClickListener {
-            val intent= Intent(this, MainActivity::class.java)
+            val intent= Intent(this, SecondScreen::class.java)
             startActivity(intent)
         }
 
