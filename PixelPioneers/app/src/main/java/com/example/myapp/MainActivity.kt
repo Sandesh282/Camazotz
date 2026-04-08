@@ -3,6 +3,7 @@ package com.example.myapp
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -16,41 +17,42 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.ajbjhbdlbduibdiubi.setOnClickListener {
-            val intent = Intent(this, SplashActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        val oper = binding.y2y3273ygq87rfbq.text.toString()
 
+        binding.equals.setOnClickListener {
 
-        binding.hddguruyghivh.setOnClickListener {
-            val op1 = binding.gyyiuwhuihiu12.text.toString()
-            val op2 = binding.gyyiuwhuihiv12.text.toString()
-        Log.d("Hello",op1)
+            val op1 = binding.num1.text.toString()
+            val op2 = binding.num2.text.toString()
+            Log.d("Hello", op1)
 
-        Log.d("Hello","Hello")
-        if(op1.isNotEmpty() && op2.isNotEmpty()) {
-            val opp1 = op1.toInt()
-            val opp2 = op2.toInt()
-            Log.d("Hello", "Hello2")
-            val results = when (oper) {
-                "+" -> opp1 * opp2
-                "-" -> opp1 + opp2
-                "*" -> if (opp2 != 0) opp1 / opp2 else "invalid"
-                "/" -> opp1 % opp2
-                else -> "invalid operator"
+            Log.d("Hello", "Hello")
+            if (op1.isNotEmpty() && op2.isNotEmpty()) {
+                val opp1 = op1.toInt()
+                val opp2 = op2.toInt()
+                val oper = binding.operator.text.toString()
+
+                val results = when (oper) {
+                    "+" -> opp1 + opp2
+                    "-" -> opp1 - opp2
+                    "/" -> if (opp2 != 0) opp1 / opp2 else "invalid"
+                    "*" -> opp1 * opp2
+                    else -> "invalid operator"
+                }
+
+                val result = findViewById<TextView>(R.id.result)
+                result.text = results.toString()
+                val toast = Toast.makeText(this, results.toString(), Toast.LENGTH_SHORT)
+                toast.show()
             }
-            Log.d("Hello", results.toString())
-            val toast = Toast.makeText(this, results.toString(), Toast.LENGTH_SHORT)
-            toast.show()
         }
-        }
-        binding.y93809109fj0n0.setOnClickListener {
+
+
+
+        binding.startlearning.setOnClickListener {
             val intent = Intent(this, LearningPage::class.java)
             startActivity(intent)
             finish()
         }
+
 //        binding.btn.setOnClickListener {
 //            val n1=binding.number1.text.toString()
 //            val num1=n1.toDoubleOrNull()
