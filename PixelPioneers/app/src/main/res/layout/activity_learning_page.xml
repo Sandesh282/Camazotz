@@ -16,37 +16,37 @@
             android:id="@+id/u78326e873y3h9"
             android:layout_width="100dp"
             android:layout_height="40dp"
-            android:layout_marginBottom="50dp"
-            android:text="ENTER"
-            android:paddingBottom="10dp"></Button>
+            android:layout_marginBottom="20dp"
+            android:text="ENTER"></Button>
         <Button
             android:id="@+id/ui3ipoqio30"
             android:layout_width="300dp"
             android:layout_height="55dp"
-            android:layout_marginBottom="2dp"
             android:text="START PRACTICING "
             android:textAlignment="center"></Button>
 
         <androidx.cardview.widget.CardView
             android:layout_width="300dp"
-            android:layout_marginTop="4px"
             android:layout_height="350dp"
+            android:layout_marginTop="30dp"
             app:cardCornerRadius="20dp">
 
             <TextView
                 android:id="@+id/ud2uhiuh29"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
                 android:text=""/>
 
         </androidx.cardview.widget.CardView>
         <EditText
             android:id="@+id/y74928989h"
-            android:layout_width="400dp"
+            android:layout_width="300dp"
             android:layout_height="40dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="50dp"
+            android:paddingLeft="20dp"
             android:hint="ENTER YOUR OPERATOR ">
-
 
         </EditText>
 
