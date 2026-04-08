@@ -55,9 +55,9 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSign_up"
-                    android:layout_width="match_parent"
-                    android:layout_height="124dp"
-                    android:backgroundTint="@color/black"
+                    android:layout_width="318dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/purple_500"
                     android:elevation="6dp"
                     android:text="Sign Up"
                     android:textAllCaps="false"
@@ -68,16 +68,17 @@
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnLogin"
                     style="@style/Widget.Material3.Button.OutlinedButton"
-                    android:layout_width="match_parent"
-                    android:layout_height="56dp"
+                    android:layout_width="318dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="14dp"
                     android:text="Login"
-                    android:textSize="16sp"
                     android:textAllCaps="false"
-                    android:textColor="@color/purple_500"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
                     android:textStyle="bold"
+                    app:backgroundTint="@color/purple_500"
                     app:cornerRadius="18dp"
-                    app:strokeColor="#40FFFFFF"/>
+                    app:strokeColor="#40FFFFFF" />
 
             </LinearLayout>
 
