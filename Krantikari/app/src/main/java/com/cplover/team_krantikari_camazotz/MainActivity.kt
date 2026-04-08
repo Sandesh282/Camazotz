@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val btn = findViewById<Button>(R.id.button3);
         val username = findViewById<TextInputEditText>(R.id.pass)
         btn.setOnLongClickListener {
-            val intent = Intent(this , MainActivity::class.java)
+            val intent = Intent(this , MainActivity2::class.java)
             startActivity(intent)
             true
         }
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
             val toast = Toast.makeText(this , txt , dur)
             toast.show()
-            val intent = Intent(this , MainActivity2::class.java)
+            val intent = Intent(this , MainActivity3::class.java)
             var user = username.text.toString()
             intent.putExtra("Username",user)
             startActivity(intent)
