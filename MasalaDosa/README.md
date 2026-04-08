@@ -208,19 +208,8 @@ Explain briefly:
 
 ## Phase 1 — Broken UI
 
-Screen 1: <img width="1029" height="2048" alt="Screenshot 2026-04-08 at 6 29 04 PM" src="https://github.com/user-attachments/assets/fb266b93-3762-449e-b119-8c692155e365" />
-
-Screen 2: <img width="462" height="925" alt="Screenshot 2026-04-08 at 6 34 04 PM" src="https://github.com/user-attachments/assets/73d7c470-cca3-4b33-9976-3fe4d3a8505e" />
-
-Screen 3: <img width="1058" height="2048" alt="Screenshot 2026-04-08 at 6 41 59 PM" src="https://github.com/user-attachments/assets/550c802f-950d-4f9d-ac13-048dcc9ee40b" />
-
 ## Phase 2 — Improved UI
 
-Screen 1: <img width="507" height="1000" alt="Screenshot 2026-04-08 at 7 46 36 PM" src="https://github.com/user-attachments/assets/9891ff26-f160-46a3-b380-0b1f68fe0967" />
-
-Screen 2: <img width="516" height="1000" alt="Screenshot 2026-04-08 at 7 46 54 PM" src="https://github.com/user-attachments/assets/4ba3668e-e827-409f-92cd-3dd820f6d691" />
-
-Screen 3: <img width="546" height="1019" alt="Screenshot 2026-04-08 at 7 47 01 PM" src="https://github.com/user-attachments/assets/36283cc5-e9f3-4305-b357-3f9807f13afb" />
 
 
 ---
