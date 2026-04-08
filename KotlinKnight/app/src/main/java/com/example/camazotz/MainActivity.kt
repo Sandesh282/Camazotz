@@ -16,10 +16,10 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val button=findViewById<Button>(R.id.button)
+        val btn = findViewById<Button>(R.id.button)
 
-        button.setOnClickListener {
-            val intent= Intent(this, SecondScreen::class.java)
+        btn.setOnClickListener {
+            val intent = Intent(this, SecondScreen::class.java)
             startActivity(intent)
         }
     }
