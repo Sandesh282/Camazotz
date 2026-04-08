@@ -9,10 +9,8 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg">
+        android:layout_height="wrap_content">
 
-        <!-- TITLE -->
         <TextView
             android:id="@+id/tv_title"
             android:layout_width="wrap_content"
@@ -44,8 +42,8 @@
         <!-- CARD -->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_profile_card_container"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="378dp"
+            android:layout_height="412dp"
             android:layout_margin="24dp"
             android:background="@color/grey"
             android:padding="20dp"
@@ -64,11 +62,12 @@
 
             <TextView
                 android:id="@+id/tv_label_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="108dp"
+                android:layout_height="44dp"
+                android:gravity="center"
                 android:text="NAME"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/profileImage" />
@@ -79,20 +78,21 @@
                 android:layout_height="56dp"
                 android:layout_marginTop="8dp"
                 android:hint="Enter Full Name"
-                android:textColor="@color/black"
                 android:rotation="0"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_label_name" />
 
             <TextView
                 android:id="@+id/tv_label_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="104dp"
+                android:layout_height="44dp"
+                android:gravity="center"
                 android:rotation="0"
                 android:text="EMAIL"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="29sp"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/etName" />
@@ -103,47 +103,56 @@
                 android:layout_height="56dp"
                 android:layout_marginTop="8dp"
                 android:hint="mail@example.com"
-                android:textColor="@color/black"
                 android:rotation="0"
+                android:textColor="@color/black"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_label_email" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnAccept"
-            android:layout_width="197dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="361dp"
-            android:background="#2C9D06"
-            android:text="Accept"
-            app:layout_constraintEnd_toStartOf="@+id/btnReject"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/cl_profile_card_container" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnReject"
-            android:layout_width="190dp"
-            android:layout_height="60dp"
-            android:layout_margin="8dp"
-            android:background="@color/red"
-            android:text="Reject"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container" />
-
         <!-- BUTTON ROW 2 -->
 
         <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAccept"
+            android:layout_width="198dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="20dp"
+            android:background="#2C9D06"
+            android:text="Accept"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnReject"
+            app:layout_constraintHorizontal_bias="0.538"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnReject"
+            android:layout_width="200dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
+            android:background="@color/red"
+            android:text="Reject"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConfirm"
-            android:layout_width="403dp"
-            android:layout_height="66dp"
+            android:layout_width="396dp"
+            android:layout_height="67dp"
             android:background="#069D8E"
             android:text="Confirm"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.466"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container" />
+            app:layout_constraintTop_toBottomOf="@+id/btnReject"
+            app:layout_constraintVertical_bias="0.2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
