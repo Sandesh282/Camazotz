@@ -12,45 +12,33 @@
         android:layout_height="wrap_content"
         android:background="@drawable/bg">
 
-        <TextView
-            android:id="@+id/tv_subtitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:background="@color/black"
-            android:paddingBottom="20dp"
-            android:text="Welcome!!"
-            android:textColor="@color/white"
-            android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/tv_title"
-            app:layout_constraintStart_toStartOf="@+id/tv_title"
-            app:layout_constraintTop_toBottomOf="@+id/tv_title" />
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_profile_card_container"
-            android:layout_width="364dp"
-            android:layout_height="464dp"
+            android:layout_width="374dp"
+            android:layout_height="384dp"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
             android:background="@color/grey"
             android:paddingHorizontal="20dp"
-            android:rotation="3674"
             android:paddingTop="40dp"
             android:paddingBottom="15dp"
+            android:rotation="3674"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+            app:layout_constraintTop_toTopOf="parent">
 
             <!-- Circular profile image with placeholder -->
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/profileImage"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:scaleType="centerCrop"
                 android:src="@drawable/img"
+                app:layout_constraintBottom_toTopOf="@+id/btnAccept"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.529"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -87,13 +75,16 @@
                 android:id="@+id/tv_label_email"
                 android:layout_width="294dp"
                 android:layout_height="52dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:drawablePadding="10dp"
                 android:padding="2dp"
                 android:text="ब्रो हमरा खातिर डांस करीं"
                 android:textColor="@color/black"
                 android:textSize="27dp"
                 android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/etName"
                 tools:ignore="HardcodedText" />
@@ -146,8 +137,30 @@
                 android:textColor="@color/red"
                 android:textSize="37sp"
                 android:textStyle="bold"
-                tools:layout_editor_absoluteX="122dp"
-                tools:layout_editor_absoluteY="237dp" />
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_email"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/tv_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="108dp"
+                android:background="@color/black"
+                android:paddingBottom="20dp"
+                android:text="Welcome!!"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_label_name"
+                app:layout_constraintEnd_toStartOf="@+id/profileImage"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/btnAccept"
+                app:layout_constraintVertical_bias="1.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -155,6 +168,7 @@
             android:id="@+id/btnReject"
             android:layout_width="118dp"
             android:layout_height="65dp"
+            android:layout_marginStart="36dp"
             android:layout_marginTop="500dp"
             android:background="@color/yellow"
             android:fontFamily="sans-serif-medium"
@@ -170,7 +184,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
+            app:layout_constraintVertical_bias="0.301"
             tools:ignore="HardcodedText,VisualLintButtonSize" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -200,14 +214,16 @@
             android:background="@drawable/bg"
             android:hint="ئالاقىلىشىش نومۇرى      +91"
             android:inputType="phone"
-            android:rotationX="784"
             android:padding="18dp"
             android:paddingHorizontal="16dp"
+            android:rotationX="784"
             android:textColor="@color/red"
             android:textColorHint="@color/black"
             android:textSize="18dp"
-            tools:ignore="HardcodedText,VisualLintTextFieldSize"
-            tools:layout_editor_absoluteX="66dp"
-            tools:layout_editor_absoluteY="619dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnConfirm"
+            tools:ignore="HardcodedText,VisualLintTextFieldSize" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
