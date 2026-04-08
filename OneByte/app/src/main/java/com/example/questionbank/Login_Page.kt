@@ -32,6 +32,9 @@ class Login_Page : AppCompatActivity() {
             tvStatus.text = "Not Verified"
             tvStatus.setTextColor(resources.getColor(android.R.color.holo_green_dark))
         }
+        fun isNameValid(name: String): Boolean{
+            return name.all { it.isLetter() }
+        }
 
         etName.addTextChangedListener{ resetVerification() }
         etEmail.addTextChangedListener{ resetVerification() }
@@ -50,6 +53,12 @@ class Login_Page : AppCompatActivity() {
             if (name.isEmpty()){
                 etName.error = "Please enter your Name"
                 return@setOnClickListener
+            }
+            if (isNameValid(name)){
+                //Succcess
+            }
+            else{
+                etName.error="Name must contain only Letters"
             }
 
             if (email.isEmpty()){
