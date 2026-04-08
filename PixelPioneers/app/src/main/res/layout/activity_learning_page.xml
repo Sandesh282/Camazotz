@@ -21,7 +21,7 @@
             app:cardCornerRadius="20dp">
 
             <TextView
-                android:id="@+id/ud2uhiuh29"
+                android:id="@+id/learningtv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text=""/>
@@ -32,14 +32,14 @@
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/y74928989h"
+                android:id="@+id/operatoret"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="ENTER YOUR OPERATOR ">
             </EditText>
         </com.google.android.material.textfield.TextInputLayout>
         <Button
-            android:id="@+id/u78326e873y3h9"
+            android:id="@+id/enterbtn"
             android:layout_width="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_height="wrap_content"
@@ -47,7 +47,7 @@
             android:text="ENTER" />
 
         <Button
-            android:id="@+id/ui3ipoqio30"
+            android:id="@+id/practicebtn"
             android:layout_width="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_height="55dp"
