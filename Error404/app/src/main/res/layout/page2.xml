@@ -171,12 +171,12 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAccept"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
+            android:layout_width="324dp"
+            android:layout_height="56dp"
             android:background="@color/green"
             android:fontFamily="sans-serif-medium"
-            android:padding="18dp"
-            android:text="Accept"
+            android:padding="8dp"
+            android:text="Go to next"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/black"

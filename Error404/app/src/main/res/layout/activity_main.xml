@@ -146,7 +146,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@color/blue"
                 android:fontFamily="sans-serif-medium"
-                android:padding="8dp"
+                android:padding="5dp"
                 android:text="Go To Next"
                 android:textAlignment="center"
                 android:textAllCaps="false"
