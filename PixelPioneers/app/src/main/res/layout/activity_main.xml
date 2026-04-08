@@ -29,28 +29,29 @@
         android:gravity="center"
         android:layout_gravity="center">
 
+        <EditText
+            android:id="@+id/gyyiuwhuihiu12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="ENTER A NUMBER" />
 
         <EditText
             android:id="@+id/y2y3273ygq87rfbq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Enter operator" />
-        <EditText
-            android:id="@+id/gyyiuwhuihiu12"
-            android:layout_width="169dp"
-            android:layout_height="60dp"
-            android:hint="ENTER A NUMBER" />
+
         <EditText
             android:id="@+id/gyyiuwhuihiv12"
-            android:layout_width="160dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="ENTER SECOND NUMBER"/>
 
 
         <Button
             android:id="@+id/ajbjhbdlbduibdiubi"
-            android:layout_width="124dp"
-            android:layout_height="62dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:text="=" />
 
@@ -82,12 +83,10 @@
 
     </LinearLayout>
 
-
-
     </androidx.cardview.widget.CardView>
     <Button
         android:id="@+id/y93809109fj0n0"
-        android:layout_marginTop="14dp"
+        android:layout_marginTop="16dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start Learning"
