@@ -16,23 +16,24 @@ class LearningPage : AppCompatActivity() {
         binding = ActivityLearningPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val oper = binding.y74928989h.text.toString()
 
-        binding.ui3ipoqio30.setOnClickListener {
-            val texti= when (oper){
-                "+" -> "Minus (−): The Taker\n" +
+        binding.startPracticing.setOnClickListener {
+            val oper = binding.editText.text.toString()
+
+            val texti = when (oper){
+                "-" -> "Minus (−): The Taker\n" +
                         "The Minus sign is like a hungry monster. It starts with a big group and takes some away, leaving you with whatever is left behind."
-                "-" -> "Divide (÷): The Fair Sharer\n" +
+                "/" -> "Divide (÷): The Fair Sharer\n" +
                         "Division is all about being fair. It takes a big pile of treats and breaks them into equal-sized groups so every friend gets the exact same amount"
-                "/" ->"Plus (+): The Joiner\n" +
+                "+" -> "Plus (+): The Joiner\n" +
                         "The Plus sign is like glue. It takes two separate groups of things—like 3 apples and 2 apples—and puts them together into one big pile of 5."
-                "*" ->"Times (×): The Teleporter\n" +
+                "*" -> "Times (*): The Teleporter\n" +
                         "Multiplication is \"super-fast adding.\" Instead of adding 2+2+2+2, you just say \"4 groups of 2\" to get to 8 in a single jump!"
                 else -> {"ghi"}
             }
             binding.ud2uhiuh29.text=texti
         }
-        binding.u78326e873y3h9.setOnClickListener {
+        binding.enter.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
