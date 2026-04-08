@@ -5,21 +5,23 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEB3B">
+    android:background="@color/white">
 
     <EditText
         android:id="@+id/etTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
         android:background="@android:color/transparent"
         android:hint="Title"
         android:padding="16dp"
         android:textColor="#FFFFFF"
-        android:textColorHint="#94A3B8"
-        android:textSize="20sp"
+        android:textColorHint="#0E0F10"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <View
         android:id="@+id/view"
@@ -32,8 +34,9 @@
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="407dp"
-        android:layout_height="507dp"
+        android:layout_width="400dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="370dp"
         android:scaleY="-1"
         app:layout_constraintBottom_toTopOf="@+id/btnSave1"
@@ -52,7 +55,7 @@
             android:scaleY="-1"
             android:textColor="#E2E8F0"
             android:textColorHint="#64748B"
-            android:textSize="60sp"/>
+            android:textSize="60sp" />
     </ScrollView>
 
     <Button
@@ -62,7 +65,7 @@
         android:text=" Don't Save Note"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#FF0000"
+        android:backgroundTint="#673AB7"
         android:layout_margin="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +77,7 @@
         android:layout_height="81dp"
         android:layout_margin="16dp"
         android:layout_marginBottom="48dp"
-        android:backgroundTint="#FF0000"
+        android:backgroundTint="#673AB7"
         android:text="Quick save"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
@@ -86,7 +89,7 @@
         android:layout_width="145dp"
         android:layout_height="81dp"
         android:layout_margin="16dp"
-        android:backgroundTint="#FF0000"
+        android:backgroundTint="#673AB7"
         android:text="Save Now"
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
