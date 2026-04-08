@@ -23,8 +23,8 @@ class SplashActivity : AppCompatActivity() {
             .load(R.drawable.loginnnn)
             .into(binding.yewwhkuhiduhdq)
 
-        val mediaPlayer = MediaPlayer.create(this, R.raw.dance)
-        mediaPlayer.start()
+//        val mediaPlayer = MediaPlayer.create(this, R.raw.dance)
+//        mediaPlayer.start()
 
     }
 }
