@@ -14,25 +14,27 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main2)
-        val btn = findViewById<Button>(R.id.button4)
-        val btn2 = findViewById<Button>(R.id.button0)
+        val btn4 = findViewById<Button>(R.id.button4)
+        val btn0 = findViewById<Button>(R.id.button0)
         val btn3 = findViewById<Button>(R.id.button3)
-        val btn4 = findViewById<Button>(R.id.button2)
-        val btn5 = findViewById<Button>(R.id.button6)
-        val btn6 = findViewById<Button>(R.id.button7)
-        val btn7 = findViewById<Button>(R.id.button)
+        val btn2 = findViewById<Button>(R.id.button2)
+        val btn6 = findViewById<Button>(R.id.button6)
+        val btn7 = findViewById<Button>(R.id.button7)
+        val btn5 = findViewById<Button>(R.id.button5)
+        val btn8 = findViewById<Button>(R.id.button8)
+        val btn = findViewById<Button>(R.id.button)
         val name = intent.getStringExtra("Username")
-        btn2.setOnLongClickListener {
-            val txt = "Password: ${name}"
+        btn0.setOnClickListener {
+            val txt = "UserName: ${name}"
             val dur = Toast.LENGTH_LONG
 
             val toast = Toast.makeText(this , txt , dur)
             toast.show()
-            val intent = Intent(this , MainActivity::class.java)
+            val intent = Intent(this , MainActivity3::class.java)
             startActivity(intent)
             true
         }
-        btn.setOnLongClickListener() {
+        btn2.setOnClickListener() {
             val txt = "Welcome To Foss Wing"
             val dur = Toast.LENGTH_LONG
 
@@ -42,7 +44,27 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
             true
         }
-        btn4.setOnLongClickListener() {
+        btn8.setOnClickListener() {
+            val txt = "Welcome To Design Wing"
+            val dur = Toast.LENGTH_LONG
+
+            val toast = Toast.makeText(this , txt , dur)
+            toast.show()
+            val intent = Intent(this , MainActivity2::class.java)
+            startActivity(intent)
+            true
+        }
+        btn.setOnClickListener() {
+            val txt = "Welcome To ML Wing"
+            val dur = Toast.LENGTH_LONG
+
+            val toast = Toast.makeText(this , txt , dur)
+            toast.show()
+            val intent = Intent(this , MainActivity2::class.java)
+            startActivity(intent)
+            true
+        }
+        btn4.setOnClickListener() {
             val txt = "Welcome To CP Wing"
             val dur = Toast.LENGTH_LONG
 
@@ -52,17 +74,17 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
             true
         }
-        btn3.setOnLongClickListener() {
+        btn3.setOnClickListener() {
             val txt = "Welcome To APP Wing"
             val dur = Toast.LENGTH_LONG
 
             val toast = Toast.makeText(this , txt , dur)
             toast.show()
-            val intent = Intent(this , MainActivity3::class.java)
+            val intent = Intent(this , MainActivity2::class.java)
             startActivity(intent)
             true
         }
-        btn5.setOnLongClickListener() {
+        btn5.setOnClickListener() {
             val txt = "Welcome To Infosec Wing"
             val dur = Toast.LENGTH_LONG
 
@@ -72,7 +94,7 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
             true
         }
-        btn6.setOnLongClickListener() {
+        btn6.setOnClickListener() {
             val txt = "Welcome To Web Wing"
             val dur = Toast.LENGTH_LONG
 
@@ -82,8 +104,8 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(intent)
             true
         }
-        btn7.setOnLongClickListener() {
-            val txt = "Welcome"
+        btn7.setOnClickListener() {
+            val txt = "Welcome TO Web3 Wing"
             val dur = Toast.LENGTH_LONG
 
             val toast = Toast.makeText(this , txt , dur)
