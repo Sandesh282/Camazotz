@@ -14,17 +14,26 @@ import com.example.myapp.databinding.ActivitySplashBinding
 
 class SplashActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySplashBinding
+    private lateinit var mediaPlayer: MediaPlayer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        Glide.with(this@SplashActivity)
+        Glide.with(this)
             .asGif()
             .load(R.drawable.loginnnn)
-            .into(binding.yewwhkuhiduhdq)
+            .into(binding.geminiimg)
 
         val mediaPlayer = MediaPlayer.create(this, R.raw.dance)
         mediaPlayer.start()
+        binding.root.postDelayed({
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }, 3000)
 
+    }
+    override fun onDestroy() {
+        super.onDestroy()
+        mediaPlayer.release()
     }
 }
