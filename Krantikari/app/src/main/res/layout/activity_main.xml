@@ -36,6 +36,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="80dp"
                 android:text="Fill"
+                android:textColor="?attr/colorOnSurface"
                 app:layout_constraintBottom_toTopOf="@+id/textInputLayout2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.069"
@@ -56,6 +57,7 @@
                     android:id="@+id/pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="?attr/colorOnSurface"
                     android:hint="Username" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -73,6 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Password"
+                    android:textColor="?attr/colorOnSurface"
                     android:inputType="textPassword" />
             </com.google.android.material.textfield.TextInputLayout>
 
