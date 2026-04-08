@@ -12,7 +12,7 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="60dp"
         android:backgroundTint="#FFEB3B"
         android:text="ML"
         app:layout_constraintBottom_toTopOf="@+id/button6"
@@ -47,7 +47,6 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="108dp"
         android:layout_marginBottom="4dp"
-        android:backgroundTint="#FFFFFF"
         android:text="FOSS"
         app:layout_constraintBottom_toTopOf="@+id/button5"
         app:layout_constraintEnd_toStartOf="@+id/button"
@@ -66,8 +65,7 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:backgroundTint="#FFFFFF"
+        android:layout_marginEnd="60dp"
         android:text="App"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,11 +86,13 @@
         android:id="@+id/button4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="112dp"
+        android:layout_marginEnd="108dp"
         android:backgroundTint="#FF0000"
         android:text="CP"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toStartOf="@+id/button3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0" />
 
@@ -102,6 +102,7 @@
         android:layout_height="41dp"
         android:layout_marginTop="36dp"
         android:text="Axios Wings"
+        android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
@@ -124,7 +125,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="64dp"
-        android:backgroundTint="#F8F4F4"
         android:text="Web"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toEndOf="parent"
@@ -151,6 +151,8 @@
         android:text="Infosec"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2" />
 
     <TextView
@@ -168,7 +170,7 @@
         android:id="@+id/button8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
+        android:layout_marginEnd="60dp"
         android:backgroundTint="#0335E0"
         android:text="Design"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -196,6 +198,7 @@
         android:text="Web3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/button0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button5" />
 
