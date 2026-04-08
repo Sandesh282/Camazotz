@@ -36,11 +36,11 @@ class ThirdScreen : AppCompatActivity() {
 
         val bookId = intent.getIntExtra("ID", 0)
         val name = intent.getStringExtra("NAME")
-        val price = intent.getStringExtra("Price")
+        val price = intent.getIntExtra("Price",0)
         val image = intent.getIntExtra("IMAGE", 0)
 
         Name.text = name
-        Price.text = price
+        Price.text = price.toString()
         Image.setImageResource(image)
 
         val sharedPref = getSharedPreferences("BookNotes", Context.MODE_PRIVATE)
