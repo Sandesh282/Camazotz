@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.ajbjhbdlbduibdiubi.setOnClickListener {
-            val intent = Intent(this, SplashActivity::class.java)
+            val intent = Intent(this, LearningPage::class.java)
             startActivity(intent)
             finish()
         }
@@ -35,10 +35,11 @@ class MainActivity : AppCompatActivity() {
             val opp2 = op2.toInt()
             Log.d("Hello", "Hello2")
             val results = when (oper) {
-                "+" -> opp1 * opp2
-                "-" -> opp1 + opp2
-                "*" -> if (opp2 != 0) opp1 / opp2 else "invalid"
-                "/" -> opp1 % opp2
+                "+" -> opp1 + opp2
+                "-" -> opp1 - opp2
+                "*" -> opp1 * opp2
+                "/" -> if (opp2 != 0) opp1 / opp2 else "invalid"
+                "%" -> opp1 % opp2
                 else -> "invalid operator"
             }
             Log.d("Hello", results.toString())
