@@ -41,8 +41,13 @@
 
     <TextView
         android:id="@+id/textView12"
+<<<<<<< Updated upstream
         android:layout_width="393dp"
         android:layout_height="73dp"
+=======
+        android:layout_width="385dp"
+        android:layout_height="80dp"
+>>>>>>> Stashed changes
         android:layout_marginTop="104dp"
         android:gravity="center_horizontal"
         android:text="Don't Miss Out The Opportunity ✨✨"
