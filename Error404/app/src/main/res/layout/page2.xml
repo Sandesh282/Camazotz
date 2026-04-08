@@ -14,8 +14,8 @@
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="291dp"
-            android:layout_height="203dp"
+            android:layout_width="245dp"
+            android:layout_height="68dp"
             android:background="@color/black"
             android:text="Profile Setup"
             android:textColor="@color/red"
@@ -31,7 +31,7 @@
             android:layout_height="32dp"
             android:layout_marginTop="4dp"
             android:background="@color/black"
-            android:paddingBottom="20dp"
+            android:paddingBottom="6dp"
             android:text="Welcome!!"
             android:textColor="@color/white"
             android:textSize="20sp"
@@ -47,7 +47,6 @@
             android:layout_marginStart="24dp"
             android:layout_marginTop="4dp"
             android:layout_marginEnd="24dp"
-            android:rotation="50"
             android:background="@color/grey"
             android:paddingHorizontal="20dp"
             android:paddingTop="40dp"
@@ -92,7 +91,6 @@
                 android:background="@drawable/bg"
                 android:hint="輸入您的電子郵件，例如 mai.example.com"
                 android:inputType="textPersonName"
-                android:rotation="23"
                 android:paddingHorizontal="16dp"
                 android:textColor="@color/red"
                 android:textColorHint="@color/black"
@@ -123,7 +121,6 @@
                 android:autofillHints="no"
                 android:background="@drawable/bg"
                 android:hint="Enter your age e.g 45"
-                android:rotation="-64"
                 android:inputType="textEmailAddress"
                 android:padding="18dp"
                 android:paddingHorizontal="16dp"
@@ -135,28 +132,48 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv_label_email"
                 tools:ignore="HardcodedText,VisualLintTextFieldSize" />
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAccept"
+                android:layout_width="324dp"
+                android:layout_height="56dp"
+                android:background="@color/green"
+                android:fontFamily="sans-serif-medium"
+                android:padding="8dp"
+                android:text="Go to next"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail"
+                tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnReject"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
+            android:layout_width="145dp"
+            android:layout_height="60dp"
             android:background="@color/yellow"
             android:fontFamily="sans-serif-medium"
-            android:padding="18dp"
+            android:padding="8dp"
             android:text="Reject"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@android:color/black"
             android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnCancel"
+            app:layout_constraintStart_toStartOf="parent"
             tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-            tools:layout_editor_absoluteX="29dp"
-            tools:layout_editor_absoluteY="660dp" />
+            tools:layout_editor_absoluteY="638dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnCancel"
             android:layout_width="0dp"
             android:layout_height="64dp"
+            android:layout_marginEnd="12dp"
             android:background="@color/violet"
             android:fontFamily="sans-serif-medium"
             android:padding="18dp"
@@ -165,34 +182,15 @@
             android:textAllCaps="false"
             android:textColor="@android:color/black"
             android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/btnConfirm"
             tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-            tools:layout_editor_absoluteX="77dp"
             tools:layout_editor_absoluteY="638dp" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnAccept"
-            android:layout_width="324dp"
-            android:layout_height="56dp"
-            android:background="@color/green"
-            android:fontFamily="sans-serif-medium"
-            android:padding="8dp"
-            android:text="Go to next"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.5"
-            tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConfirm"
             android:layout_width="0dp"
             android:layout_height="64dp"
+            android:layout_marginEnd="28dp"
             android:background="@color/blue"
             android:fontFamily="sans-serif-medium"
             android:padding="18dp"
@@ -201,8 +199,8 @@
             android:textAllCaps="false"
             android:textColor="#4DB6AC"
             android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-            tools:layout_editor_absoluteX="188dp"
-            tools:layout_editor_absoluteY="637dp" />
+            tools:layout_editor_absoluteY="638dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
