@@ -15,9 +15,15 @@
 
         <TextView
             android:layout_width="match_parent"
+            android:textSize="40sp"
+            android:layout_height="match_parent"
+            android:text="MindSpark" />
+        <ImageView
+            android:id="@+id/myImageView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="MindSpark"
-            />
+            android:src="@drawable/images"
+            android:contentDescription="Image Description" />
         <EditText
             android:id="@+id/username"
             android:layout_width="match_parent"
@@ -59,12 +65,7 @@
             android:text="Submit"
             android:layout_marginTop="24dp" />
 
-        <ImageView
-            android:id="@+id/myImageView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/images"
-            android:contentDescription="Image Description" />
+
 
 
     </LinearLayout>
