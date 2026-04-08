@@ -23,7 +23,7 @@ class SecondScreen : AppCompatActivity(){
         image.setOnClickListener {
             openBook(
                 1,
-                "Food",
+                "Maggie",
                 100,
                 R.drawable.img
             )
@@ -32,7 +32,7 @@ class SecondScreen : AppCompatActivity(){
         image2.setOnClickListener {
             openBook(
                 2,
-                "Food",
+                "Maggie",
                 100,
                 R.drawable.img
             )
@@ -41,14 +41,14 @@ class SecondScreen : AppCompatActivity(){
         image3.setOnClickListener {
             openBook(
                 3,
-                "Food", 100,
+                "Maggie", 100,
                 R.drawable.img
             )
         }
         image4.setOnClickListener {
             openBook(
                 4,
-                "Food",
+                "CoffeeShakes",
                 100,
                 R.drawable.img
             )
@@ -57,7 +57,7 @@ class SecondScreen : AppCompatActivity(){
         image5.setOnClickListener {
             openBook(
                 5,
-                "Food",
+                "CoffeeShakes",
                 100,
                 R.drawable.img
             )
@@ -66,7 +66,7 @@ class SecondScreen : AppCompatActivity(){
         image6.setOnClickListener {
             openBook(
                 6,
-                "food",
+                "CoffeeShakes",
                 100,
                 R.drawable.img
             )
@@ -75,7 +75,7 @@ class SecondScreen : AppCompatActivity(){
         image7.setOnClickListener {
             openBook(
                 7,
-                "food",
+                "Pizza",
                 100,
                 R.drawable.img
             )
@@ -84,7 +84,7 @@ class SecondScreen : AppCompatActivity(){
         image8.setOnClickListener {
             openBook(
                 8,
-                "food",
+                "Pizza",
                 100,
                 R.drawable.img
             )
@@ -92,15 +92,12 @@ class SecondScreen : AppCompatActivity(){
         image9.setOnClickListener {
             openBook(
                 9,
-                "food",
+                "Pizza",
                 100,
                 R.drawable.img
             )
         }
     }
-
-
-
 
     fun openBook(id: Int, name: String, price: Int, image: Int) {
         val intent = Intent(this, ThirdScreen ::class.java)
