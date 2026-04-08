@@ -10,26 +10,25 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#e6000f"
+        android:background="@color/white"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="-127dp">
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="366dp"
-            android:layout_height="369dp"
-            android:layout_marginTop="52dp"
-            android:text="You Broke Ahh! "
-            android:textSize="96sp"
+            android:layout_width="379dp"
+            android:layout_height="157dp"
+            android:layout_marginTop="124dp"
+            android:text="Welcome\nto our app!"
+            android:textSize="56sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.088"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
             android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="150dp"
+            android:layout_height="79dp"
             android:layout_marginTop="60dp"
             android:text="Save"
             app:layout_constraintBottom_toBottomOf="parent"

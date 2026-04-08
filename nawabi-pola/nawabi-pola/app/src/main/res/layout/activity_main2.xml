@@ -13,9 +13,9 @@
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#FF0000"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:background="@color/white"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="54dp">
 
 
         <TextView
@@ -30,9 +30,9 @@
             android:layout_marginTop="647dp"
             android:layout_marginEnd="40dp"
             android:layout_marginBottom="30dp"
-            android:text="Your Notes Are Safe With Us"
-            android:textColor="#FFEB3B"
-            android:textSize="25sp"
+            android:text="Your data is safe and encrypted"
+            android:textColor="#020201"
+            android:textSize="22sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,11 +44,10 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="59dp"
-            android:layout_marginEnd="5dp"
-            android:layout_marginBottom="575dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="572dp"
             android:text="Enter your details for us"
-            android:textColor="#1ADB22"
             android:textSize="26sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,51 +56,49 @@
 
         <Button
             android:id="@+id/button1"
-            android:layout_width="wrap_content"
+            android:layout_width="127dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="333dp"
-            android:layout_marginTop="26dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="650dp"
+            android:layout_marginStart="134dp"
+            android:layout_marginTop="563dp"
+            android:layout_marginEnd="150dp"
+            android:layout_marginBottom="126dp"
             android:text="enter" />
 
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="240dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="107dp"
+            android:layout_marginEnd="64dp"
+
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/passworda"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="98dp"
+            android:layout_marginTop="64dp"
+            android:layout_marginEnd="63dp"
+            android:ems="10"
+
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="#201E1E"
+            android:textSize="30sp" />
+
     </RelativeLayout>
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="240dp"
-        android:layout_height="73dp"
-        android:layout_marginBottom="130dp"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textEmailAddress"
-        android:textSize="5sp"
-        app:layout_constraintBottom_toBottomOf="@+id/relativeLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passworda"
-        app:layout_constraintVertical_bias="0.213" />
-
-    <EditText
-        android:id="@+id/passworda"
-        android:layout_width="314dp"
-        android:layout_height="129dp"
-        android:layout_marginTop="64dp"
-        android:capitalize="words"
-        android:ems="10"
-        android:hint="EMAIL"
-        android:inputType="textPassword"
-        android:textColor="#201E1E"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pfp" />
-
 
     <ImageView
         android:id="@+id/pfp"
@@ -113,5 +110,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.525"
         app:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/lion" />
+        tools:srcCompat="@drawable/rii" />
 </androidx.constraintlayout.widget.ConstraintLayout>
