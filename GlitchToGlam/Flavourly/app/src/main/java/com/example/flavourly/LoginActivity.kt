@@ -31,7 +31,7 @@ class LoginActivity : AppCompatActivity() {
             val pass = passwordInput.text.toString()
 
             val prefs = getSharedPreferences("GastroDb", Context.MODE_PRIVATE)
-            val savedPassword = prefs.getString(email, null)
+            val savedPassword = prefs.getString(pass, pass)
 
             if (savedPassword != null && savedPassword == pass) {
                 startActivity(Intent(this, MainActivity::class.java))
