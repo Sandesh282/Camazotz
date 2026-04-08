@@ -6,35 +6,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
+    android:background="?attr/colorPrimary"
     >
 
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="188dp"
-        android:layout_height="241dp"
-        android:layout_marginTop="152dp"
-        android:text="Canteen Food Not to Eat"
-        android:textColor="#FFFFFF"
-        android:textSize="45dp"
+        android:layout_width="347dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="56dp"
+        android:gravity="center_horizontal"
+        android:text="Why Eat Mess Food ? 🤢"
+        android:textColor="#3E2120"
+        android:textSize="42dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="310dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center_horizontal"
+        android:text="When You Have Us"
+        android:textColor="#493720"
+        android:textSize="34dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="385dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="104dp"
+        android:gravity="center_horizontal"
+        android:text="Don't Miss Out The Opportunity ✨✨"
+        android:textAppearance="@color/design_default_color_primary"
+        android:textColor="#161606"
+        android:textFontWeight="1600"
+        android:textSize="27dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="348dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="Enjoy Your Day With Tasty Food on Your Hand 😋😋"
+        android:textColor="#ED332806"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
     <Button
         android:id="@+id/button"
-        android:layout_width="314dp"
-        android:layout_height="58dp"
-        android:backgroundTint="#06072A"
+        android:layout_width="250dp"
+        android:layout_height="77dp"
+        android:backgroundTint="#E0613A27"
         android:text="Start Order"
         android:textColor="@color/white"
-        android:textSize="18sp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.372"
         app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.627" />
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        app:layout_constraintVertical_bias="0.512" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,6 +14,7 @@ import android.content.Intent
 import android.text.TextWatcher
 import android.text.Editable
 import com.example.camazotz.MainActivity
+import androidx.core.content.edit
 
 class ThirdScreen : AppCompatActivity() {
     private lateinit var etNote: EditText
@@ -23,9 +24,6 @@ class ThirdScreen : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.orderpage)
-
-        val imageView = findViewById<ImageView>(R.id.imageView2)
-        val textView = findViewById<TextView>(R.id.textView6)
         val imageRes = intent.getIntExtra("image", 0)
 
         val Image = findViewById<ImageView>(R.id.imageView2)
@@ -51,7 +49,7 @@ class ThirdScreen : AppCompatActivity() {
         // Auto-save while typing
         notesEditText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(s: Editable?) {
-                sharedPref.edit().putString(noteKey, s.toString()).apply()
+                sharedPref.edit { putString(noteKey, s.toString()) }
             }
 
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}

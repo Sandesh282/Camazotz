@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
         val oper = binding.y2y3273ygq87rfbq.text.toString()
-
+        val results=
 
         binding.hddguruyghivh.setOnClickListener {
             val op1 = binding.gyyiuwhuihiu12.text.toString()
@@ -35,12 +35,14 @@ class MainActivity : AppCompatActivity() {
             val opp2 = op2.toInt()
             Log.d("Hello", "Hello2")
             val results = when (oper) {
-                "+" -> opp1 * opp2
-                "-" -> opp1 + opp2
-                "*" -> if (opp2 != 0) opp1 / opp2 else "invalid"
-                "/" -> opp1 % opp2
+                "+" -> opp1 + opp2
+                "-" -> opp1 - opp2
+                "*" -> opp1 * opp2
+                "/" -> if (opp2 != 0) opp1 / opp2 else "invalid"
+                "%" -> if (opp2 != 0) opp1 % opp2 else "invalid"
                 else -> "invalid operator"
             }
+            binding.result.text=results.toString()
             Log.d("Hello", results.toString())
             val toast = Toast.makeText(this, results.toString(), Toast.LENGTH_SHORT)
             toast.show()

@@ -23,6 +23,7 @@
         android:layout_gravity="center"
         app:cardCornerRadius="20sp">
     <LinearLayout
+        android:paddingVertical="50dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -31,20 +32,24 @@
 
 
         <EditText
+            android:id="@+id/gyyiuwhuihiu12"
+            android:inputType="number"
+            android:layout_width="169dp"
+            android:layout_height="wrap_content"
+            android:hint="ENTER A NUMBER." />
+
+        <EditText
             android:id="@+id/y2y3273ygq87rfbq"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Enter operator" />
-        <EditText
-            android:id="@+id/gyyiuwhuihiu12"
-            android:layout_width="169dp"
-            android:layout_height="60dp"
-            android:hint="ENTER A NUMBER" />
+
         <EditText
             android:id="@+id/gyyiuwhuihiv12"
-            android:layout_width="160dp"
+            android:layout_width="215dp"
+            android:inputType="number"
             android:layout_height="wrap_content"
-            android:hint="ENTER SECOND NUMBER"/>
+            android:hint="ENTER SECOND NUMBER."/>
 
 
         <Button
@@ -53,7 +58,6 @@
             android:layout_height="62dp"
             android:gravity="center"
             android:text="=" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -80,6 +84,15 @@
                         android:src="@drawable/logo1" />
         </LinearLayout>
 
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+
+            android:inputType="number" />
+
+
     </LinearLayout>
 
 
@@ -92,7 +105,7 @@
         android:layout_height="wrap_content"
         android:text="Start Learning"
         android:textStyle="bold"
-        android:textSize="38sp"/>
+        android:textSize="35sp"/>
 </LinearLayout>
 
 

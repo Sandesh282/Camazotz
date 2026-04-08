@@ -10,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.button.MaterialButton
 import org.w3c.dom.Text
 
-class Profile_Page : AppCompatActivity() {
+class zzzProfile_Page : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -23,8 +23,8 @@ class Profile_Page : AppCompatActivity() {
         val age = sharedPref.getString("age",null) ?: "Not Found"
         val state = sharedPref.getString("state",null) ?: "Not Found"
 
-        val nText = findViewById<TextView>(R.id.nameText)
-        val eText = findViewById<TextView>(R.id.emailText)
+        val nText = findViewById<TextView>(R.id.etName)
+        val eText = findViewById<TextView>(R.id.etEmail)
         val pText = findViewById<TextView>(R.id.phoneText)
         val aText = findViewById<TextView>(R.id.ageText)
         val sText = findViewById<TextView>(R.id.stateText)

@@ -53,23 +53,22 @@
                     app:layout_constraintTop_toTopOf="parent"
                     app:layout_constraintBottom_toBottomOf="parent"/>
 
-                <!--        <com.google.android.material.button.MaterialButton-->
-                <!--            android:id="@+id/profileButton"-->
-                <!--            style="@style/Widget.Material3.Button.IconButton"-->
-                <!--            android:layout_width="48dp"-->
-                <!--            android:layout_height="48dp"-->
-                <!--            android:padding="0dp"-->
-                <!--            app:icon="@drawable/outline_account_circle_24"-->
-                <!--            app:iconGravity="textStart"-->
-                <!--            app:iconPadding="0dp"-->
-                <!--            app:iconSize="30dp"-->
-                <!--            app:iconTint="?attr/colorIcon"-->
-                <!--            app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--            app:layout_constraintEnd_toStartOf="@id/bookmark"-->
-                <!--            app:layout_constraintHorizontal_bias="1.0"-->
-                <!--            android:layout_marginEnd="0dp"-->
-                <!--            app:layout_constraintStart_toStartOf="parent"-->
-                <!--            app:layout_constraintTop_toTopOf="parent" />-->
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/profileButton"
+                            style="@style/Widget.Material3.Button.IconButton"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:padding="0dp"
+                            app:icon="@drawable/outline_account_circle_24"
+                            app:iconGravity="textStart"
+                            app:iconPadding="0dp"
+                            app:iconSize="30dp"
+                            app:iconTint="?attr/colorIcon"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintHorizontal_bias="1.0"
+                            android:layout_marginEnd="0dp"
+                          app:layout_constraintStart_toStartOf="parent"
+                          app:layout_constraintTop_toTopOf="parent" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/logout"

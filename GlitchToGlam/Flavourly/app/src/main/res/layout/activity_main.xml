@@ -4,57 +4,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_mesh_dark">
+    android:background="@drawable/bg_mesh_dark"
+    android:padding="24dp">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/content_card"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        app:cardCornerRadius="20dp"
-        app:cardElevation="6dp"
-        app:strokeWidth="1dp"
-        app:strokeColor="#20FFFFFF"
-        android:backgroundTint="#0DFFFFFF"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottom_nav_card"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:padding="12dp"/>
-    </com.google.android.material.card.MaterialCardView>
-
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bottom_nav_card"
+    <LinearLayout
+        android:id="@+id/content_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        app:cardCornerRadius="28dp"
-        app:cardElevation="10dp"
-        app:strokeWidth="1dp"
-        app:strokeColor="#30FFFFFF"
-        android:backgroundTint="#1AFFFFFF"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="124dp"
+            android:layout_marginBottom="12dp"
+            android:gravity="center"
+            android:letterSpacing="0.04"
+            android:text="Midnight Kitchen Crisis"
+            android:textColor="#0631D0"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@android:color/transparent"
-            app:itemTextColor="@color/purple_500"
-            app:itemIconTint="@color/purple_500"
-            app:itemRippleColor="#40FFFFFF"
-            app:labelVisibilityMode="labeled"
-            android:visibility="gone"
-            app:menu="@menu/menu" />
+            android:text="The Assistant You Won't Regret Trusting"
+            android:textSize="18sp"
+            android:textColor="#E0E0E0"
+            android:gravity="center"
+            android:layout_marginBottom="48dp"/>
 
-    </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="10dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#20FFFFFF"
+            android:backgroundTint="#1AFFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:backgroundTint="@color/black"
+                    android:elevation="6dp"
+                    android:text="Sign Up"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="18dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSign_up"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="14dp"
+                    android:text="Login"
+                    android:backgroundTint="@color/black"
+                    android:textSize="16sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    app:cornerRadius="18dp"
+                    app:strokeColor="#40FFFFFF"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
