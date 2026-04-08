@@ -17,25 +17,27 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
-        val btn2 = findViewById<Button>(R.id.button)
-        val btn = findViewById<Button>(R.id.button3);
-        val username = findViewById<TextInputEditText>(R.id.pass)
-        btn.setOnLongClickListener {
+        val btn = findViewById<Button>(R.id.button)
+        val btn3 = findViewById<Button>(R.id.button3);
+        val username = findViewById<TextInputEditText>(R.id.username)
+        val password = findViewById<TextInputEditText>(R.id.password)
+        btn3.setOnClickListener {
             val intent = Intent(this , MainActivity::class.java)
             startActivity(intent)
             true
         }
-        btn2.setOnLongClickListener() {
-            var u = username.text.toString()
-            val txt = "Welcome User : Password=${u}"
+        btn.setOnClickListener() {
+
+            val txt = "Welcome User : ${username.text.toString()}"
             val dur = Toast.LENGTH_LONG
-            intent.putExtra("Username",u)
 
             val toast = Toast.makeText(this , txt , dur)
             toast.show()
+
             val intent = Intent(this , MainActivity2::class.java)
-            var user = username.text.toString()
-            intent.putExtra("Username",user)
+
+            intent.putExtra("Username",username.text.toString())
+            intent.putExtra("Password", password.text.toString())
             startActivity(intent)
             true
         }

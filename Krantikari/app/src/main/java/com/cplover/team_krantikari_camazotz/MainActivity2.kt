@@ -23,7 +23,7 @@ class MainActivity2 : AppCompatActivity() {
         val btn7 = findViewById<Button>(R.id.button)
         val name = intent.getStringExtra("Username")
         btn2.setOnLongClickListener {
-            val txt = "Password: ${name}"
+            val txt = "UserName: ${name}"
             val dur = Toast.LENGTH_LONG
 
             val toast = Toast.makeText(this , txt , dur)
