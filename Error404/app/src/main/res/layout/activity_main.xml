@@ -141,13 +141,13 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnConfirm"
-                android:layout_width="178dp"
-                android:layout_height="54dp"
+                android:layout_width="165dp"
+                android:layout_height="41dp"
                 android:layout_marginTop="16dp"
                 android:background="@color/blue"
                 android:fontFamily="sans-serif-medium"
-                android:padding="18dp"
-                android:text="Confirm"
+                android:padding="8dp"
+                android:text="Go To Next"
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:textColor="#4DB6AC"
