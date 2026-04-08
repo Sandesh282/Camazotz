@@ -14,11 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
-        android:text="Bump your fuud!"
-        android:textColor="#2F4156"
-        android:textStyle="bold"
-        android:textSize="25dp"
         android:fontFamily="sans-serif-black"
+        android:text="Bump your food!"
+        android:textColor="#2F4156"
+        android:textSize="25dp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,7 +56,7 @@
             android:layout_height="110dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/img" />
+            app:srcCompat="@drawable/img" />
 
         <ImageView
             android:id="@+id/imageView2"
@@ -110,7 +110,7 @@
             android:layout_height="110dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/img" />
+            app:srcCompat="@drawable/img" />
 
         <ImageView
             android:id="@+id/imageView6"
@@ -164,7 +164,7 @@
             android:layout_height="110dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
-            android:background="@drawable/img" />
+            app:srcCompat="@drawable/img" />
 
         <ImageView
             android:id="@+id/imageView9"
