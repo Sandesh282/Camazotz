@@ -120,9 +120,15 @@ struct ContentView2: View {
         NavigationStack {
             ZStack {
                 
-                LinearGradient(colors: [Color.blue.opacity(0.7), Color.purple.opacity(0.7)],
-                               startPoint: .top,
-                               endPoint: .bottom)
+                LinearGradient(
+                    colors: [
+                        Color.black,
+                        Color.blue.opacity(0.6),
+                        Color.indigo
+                    ],
+                    startPoint: .top,
+                    endPoint: .bottom
+                )
                 .ignoresSafeArea()
                 
                 VStack(spacing: 20) {
