@@ -38,15 +38,16 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun setUI() {
         gameModel?.apply {
-            binding.btn0.text = filledPos[1]
-            binding.btn1.text = filledPos[4]
-            binding.btn2.text = filledPos[3]
-            binding.btn3.text = filledPos[2]
-            binding.btn4.text = filledPos[7]
-            binding.btn5.text = filledPos[8]
-            binding.btn6.text = filledPos[0]
-            binding.btn7.text = filledPos[5]
-            binding.btn8.text = filledPos[6]
+            binding.btn0.text = filledPos[0]
+            binding.btn1.text = filledPos[1]
+            binding.btn2.text = filledPos[2]
+            binding.btn3.text = filledPos[3]
+            binding.btn4.text = filledPos[4]
+            binding.btn5.text = filledPos[5]
+            binding.btn6.text = filledPos[6]
+            binding.btn7.text = filledPos[7]
+            binding.btn8.text = filledPos[8]
+            // Fill the btns properly
 
             binding.startGameBtn.visibility = View.VISIBLE
 
@@ -61,7 +62,8 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
                     "Past Turn: $currentPlayer"
                 }
                 GameStatus.FINISHED -> {
-                    if (winner.isNotEmpty()) "$winner LOST!" else "Happy Birthday!!"
+                    // Fixed the results message
+                    if (winner.isNotEmpty()) "$winner WON!" else "$winner LOSS!!"
                 }
             }
         }
@@ -88,7 +90,7 @@ class GameActivity : AppCompatActivity(), View.OnClickListener {
             val clickedPos = (v?.tag as String).toInt()
             if (filledPos[clickedPos].isEmpty()) {
                 filledPos[clickedPos] = currentPlayer
-                currentPlayer = if (currentPlayer == "X") "X" else "O"
+                currentPlayer = if (currentPlayer == "X") "O" else "X" // Swap the places of X and O
                 checkForWinner()
                 updateGameData(this)
             }
