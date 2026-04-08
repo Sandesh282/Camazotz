@@ -52,13 +52,39 @@
                     android:layout_width="330dp"
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
-                    android:text="student@iiitl.ac.in"
+                    android:hint="student@iiitl.ac.in"
                     android:textSize="16sp"
+                    android:inputType="textEmailAddress"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.294"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/emailtextHeading" />
 
+                <EditText
+                    android:id="@+id/ageText"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:paddingLeft="20dp"
+                    android:hint="Enter age here"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.294"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+                <EditText
+                    android:id="@+id/stateText"
+                    android:layout_width="330dp"
+                    android:layout_height="wrap_content"
+                    android:hint="Enter state here"
+                    android:inputType="text"
+                    android:paddingLeft="20dp"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.294"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ageet" />
                 <ImageView
                     android:id="@+id/phoneImage"
                     android:layout_width="32dp"
@@ -87,7 +113,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginBottom="-5dp"
-                    android:text=""
+                    android:hint="Enter phone number here"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@id/phoneImage"
@@ -113,7 +139,7 @@
                     android:layout_height="40dp"
                     android:layout_marginStart="20dp"
                     android:layout_marginBottom="-5dp"
-                    android:text="Name"
+                    android:hint="Enter name here"
                     android:textColor="?attr/colorOnSurface"
                     android:textSize="16sp"
                     app:layout_constraintBottom_toBottomOf="@id/stateImage"
