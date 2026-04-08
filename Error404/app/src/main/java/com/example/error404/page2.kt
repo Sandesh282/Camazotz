@@ -12,28 +12,28 @@ class page2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.page2)
 
-        val btnConfirm = findViewById<Button>(R.id.btnConfirm)
-        val btnCancel = findViewById<Button>(R.id.btnCancel)
+//        val btnConfirm = findViewById<Button>(R.id.btnConfirm)
+//        val btnCancel = findViewById<Button>(R.id.btnCancel)
         val btnAccept = findViewById<Button>(R.id.btnAccept)
-        val btnReject = findViewById<Button>(R.id.btnReject)
+//        val btnReject = findViewById<Button>(R.id.btnReject)
 
         val btnAge = findViewById<TextView>(R.id.tv_label_name)
         val btnEmail = findViewById<TextView>(R.id.tv_label_email)
 
-        btnConfirm.setOnClickListener {
-            val intent = Intent(this, page2::class.java)
-            startActivity(intent)
-        }
-        btnReject.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-        btnCancel.setOnClickListener {
-            val intent = Intent(this, page4::class.java)
-            startActivity(intent)
-        }
+//        btnConfirm.setOnClickListener {
+//            val intent = Intent(this, page2::class.java)
+//            startActivity(intent)
+//        }
+//        btnReject.setOnClickListener {
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
+//        }
+//        btnCancel.setOnClickListener {
+//            val intent = Intent(this, page4::class.java)
+//            startActivity(intent)
+//        }
         btnAccept.setOnClickListener {
-            val intent = Intent(this, page3::class.java)
+            val intent = Intent(this, Game1::class.java)
             startActivity(intent)
         }
     }
