@@ -16,17 +16,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.ajbjhbdlbduibdiubi.setOnClickListener {
+        binding.equals.setOnClickListener {
             val intent = Intent(this, SplashActivity::class.java)
             startActivity(intent)
             finish()
         }
-        val oper = binding.y2y3273ygq87rfbq.text.toString()
+        val oper = binding.operator.text.toString()
 
 
         binding.hddguruyghivh.setOnClickListener {
-            val op1 = binding.gyyiuwhuihiu12.text.toString()
-            val op2 = binding.gyyiuwhuihiv12.text.toString()
+            val op1 = binding.op1.text.toString()
+            val op2 = binding.op2.text.toString()
         Log.d("Hello",op1)
 
         Log.d("Hello","Hello")
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             toast.show()
         }
         }
-        binding.y93809109fj0n0.setOnClickListener {
+        binding.learnBtn.setOnClickListener {
             val intent = Intent(this, LearningPage::class.java)
             startActivity(intent)
             finish()
