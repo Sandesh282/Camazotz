@@ -168,9 +168,13 @@ Why it is better:
 - Improved hierarchy  
 - Better accessibility  
 
-Explain briefly:
+Explain briefly:1. background colour and text colour was same , bcz of that none of the text was visible, so wew decided to change it for better expereience.
+2. the  button was visible, and also not at an accessible place, so we fixed its position and changed its size such that the button was now visibile along with the text inside it.
+3. they added so many wings along with their buttons but the buttons were not visible along with their text.
+
 
 # Lessons Learned
+
 
 - What worked  
 - What failed  

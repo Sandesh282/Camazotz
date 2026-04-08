@@ -7,8 +7,6 @@ import android.widget.Button
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
@@ -17,33 +15,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
+
         val btn2 = findViewById<Button>(R.id.button)
-        val btn = findViewById<Button>(R.id.button3);
+        val btn = findViewById<Button>(R.id.button3)
         val username = findViewById<TextInputEditText>(R.id.pass)
-        btn.setOnLongClickListener {
-            val intent = Intent(this , MainActivity::class.java)
+
+        btn.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
-            true
         }
-        btn2.setOnLongClickListener() {
-            var u = username.text.toString()
+
+        btn2.setOnClickListener {
+            val u = username.text.toString()
             val txt = "Welcome User : Password=${u}"
             val dur = Toast.LENGTH_LONG
-            intent.putExtra("Username",u)
 
-            val toast = Toast.makeText(this , txt , dur)
+            val toast = Toast.makeText(this, txt, dur)
             toast.show()
-            val intent = Intent(this , MainActivity2::class.java)
-            var user = username.text.toString()
-            intent.putExtra("Username",user)
+
+            val intent = Intent(this, MainActivity2::class.java)
+            intent.putExtra("Username", u)
             startActivity(intent)
-            true
         }
-        val txt = "Welcome"
-        val dur = Toast.LENGTH_LONG
 
-        val toast = Toast.makeText(this , txt , dur)
+        val toast = Toast.makeText(this, "Welcome", Toast.LENGTH_LONG)
         toast.show()
-
     }
 }

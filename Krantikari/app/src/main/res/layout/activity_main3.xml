@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
+            app:cardBackgroundColor="#C50C0C"
             >
 
             <LinearLayout
@@ -30,7 +30,7 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                app:cardBackgroundColor="@color/black"
+                app:cardBackgroundColor="#CE0C0C"
                 >
 
                 <TextView
@@ -38,14 +38,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="App Wing"
-                    android:textColor="@color/black"
+                    android:textColor="#FF0D0D"
                     />
                 <TextView
                     android:id="@+id/textView2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Kishan Garhwal\nInsha\nMd Anas Ali Usmani\nPrabhnoor Kaur\nKushagra\nSandesh Raj"
-                    android:textColor="@color/black"/>
+                    android:textColor="#E20B0B"/>
             </LinearLayout>
 
 
@@ -55,7 +55,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
+            app:cardBackgroundColor="#FA0000"
 
             >
 
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
 
                     android:text="Naman Khandelwal\nVaidik Saxena\nAyush Kumar Shukla\nDivyansh Singh\nArham Kachhara\nVedant Kulkarni\nShivansh Jain"
-                    android:textColor="@color/black"/>
+                    android:textColor="#000000"/>
 
             </LinearLayout>
 
@@ -103,13 +103,13 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="FOSS Wing"
-                    android:textColor="@color/black"/>
+                    android:textColor="#DE0707"/>
                 <TextView
                     android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Aryan Singh\nNaman Khandelwal\nMerin Theres Jose\nShivansh Jain\nAnirudh Singh Rajora"
-                    android:textColor="@color/black"/>
+                    android:textColor="#E90000"/>
 
             </LinearLayout>
 
@@ -136,7 +136,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="ML Wing"
-                    android:textColor="@color/black"/>
+                    android:textColor="#FF0000"/>
 
                 <TextView
                     android:id="@+id/textView8"
@@ -216,7 +216,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
+            app:cardBackgroundColor="#D70909"
 
             >
             <LinearLayout
@@ -247,7 +247,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
+            app:cardBackgroundColor="#353535"
 
             >
             <LinearLayout
@@ -262,14 +262,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Design Wing"
-                    android:textColor="@color/black"/>
+                    android:textColor="#E91010"/>
 
                 <TextView
                     android:id="@+id/textView16"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Md Mozammil Ali\nDiya Anna Varghese\nDikshya Narayan\nManas Srivastava\nKhushi Singh\nHansika Reddy"
-                    android:textColor="@color/black"/>
+                    android:textColor="#D00000"/>
             </LinearLayout>
 
 
