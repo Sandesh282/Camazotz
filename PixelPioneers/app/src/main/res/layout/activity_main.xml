@@ -17,83 +17,83 @@
         android:gravity="center"
         android:text="MINDSPARK"
         android:textSize="40sp" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="410dp"
         android:layout_height="420dp"
         android:layout_gravity="center"
         app:cardCornerRadius="20sp">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_gravity="center">
-
-
-        <EditText
-            android:id="@+id/y2y3273ygq87rfbq"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:hint="Enter operator" />
-        <EditText
-            android:id="@+id/gyyiuwhuihiu12"
-            android:layout_width="169dp"
-            android:layout_height="60dp"
-            android:hint="ENTER A NUMBER" />
-        <EditText
-            android:id="@+id/gyyiuwhuihiv12"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:hint="ENTER SECOND NUMBER"/>
-
-
-        <Button
-            android:id="@+id/ajbjhbdlbduibdiubi"
-            android:layout_width="124dp"
-            android:layout_height="62dp"
-            android:gravity="center"
-            android:text="=" />
-
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="#EB0B0B"
+            android:gravity="center"
+            android:orientation="vertical">
 
-                    <ImageButton
-                        android:id="@+id/hddguruyghiuh"
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/buutton_bg"
-                        android:layout_marginRight="75dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/logo1" />
+            <EditText
+                android:id="@+id/y2y3273ygq87rfbq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter Operator (+, -, *, /)" />
 
-                    <ImageButton
-                        android:id="@+id/hddguruyghivh"
-                        android:layout_width="55dp"
-                        android:layout_height="55dp"
-                        android:background="@drawable/buutton_bg"
-                        android:layout_marginLeft="220dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/logo1" />
+            <EditText
+                android:id="@+id/gyyiuwhuihiu12"
+                android:layout_width="169dp"
+                android:layout_height="60dp"
+                android:hint="Enter First Number" />
+
+            <EditText
+                android:id="@+id/gyyiuwhuihiv12"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Second Number" />
+
+            <Button
+                android:id="@+id/ajbjhbdlbduibdiubi"
+                android:layout_width="166dp"
+                android:layout_height="107dp"
+                android:gravity="center"
+                android:text="Go to Splash Screen" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="120dp"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/hddguruyghiuh"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginRight="75dp"
+                    android:background="@drawable/buutton_bg"
+                    android:contentDescription="Calculator Action Button"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo1" />
+
+                <ImageButton
+                    android:id="@+id/hddguruyghivh"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="220dp"
+                    android:background="@drawable/buutton_bg"
+                    android:contentDescription="Calculate Result"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/logo1" />
+            </LinearLayout>
+
         </LinearLayout>
 
-    </LinearLayout>
-
-
-
     </androidx.cardview.widget.CardView>
+
     <Button
         android:id="@+id/y93809109fj0n0"
         android:layout_marginTop="14dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Learning"
+        android:text="Go to Learning Page"
         android:textStyle="bold"
         android:textSize="38sp"/>
 </LinearLayout>
-
-
-
