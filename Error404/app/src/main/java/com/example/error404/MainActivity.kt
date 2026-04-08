@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.jvm.java
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,26 +17,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val btnConfirm = findViewById<Button>(R.id.btnConfirm)
-        val btnCancel = findViewById<Button>(R.id.btnCancel)
-        val btnAccept = findViewById<Button>(R.id.btnAccept)
-        val btnReject = findViewById<Button>(R.id.btnReject)
 
         btnConfirm.setOnClickListener {
-            val intent = Intent(this, page2::class.java)
+            val intent = Intent(this, Game1::class.java)
             startActivity(intent)
         }
-        btnAccept.setOnClickListener {
-            val intent = Intent(this, page3::class.java)
-            startActivity(intent)
-        }
-        btnCancel.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-        btnReject.setOnClickListener {
-            val intent = Intent(this, page4::class.java)
-            startActivity(intent)
-        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
