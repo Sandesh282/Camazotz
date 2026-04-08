@@ -30,7 +30,7 @@ class Login_Page : AppCompatActivity() {
         fun resetVerification() {
             isVerified = false
             tvStatus.text = "Not Verified"
-            tvStatus.setTextColor(resources.getColor(android.R.color.holo_green_dark))
+            tvStatus.setTextColor(resources.getColor(android.R.color.holo_red_dark))
         }
         fun isNameValid(name: String): Boolean{
             return name.all { it.isLetter() }
@@ -100,7 +100,7 @@ class Login_Page : AppCompatActivity() {
 
             isVerified=false
             tvStatus.text = "Verified"
-            tvStatus.setTextColor(resources.getColor((android.R.color.holo_red_dark)))
+            tvStatus.setTextColor(resources.getColor((android.R.color.holo_green_dark)))
 //            tvStatus.setCompoundDrawablesWithIntrinsicBounds(R.drawable.baseline_check_circle_24,0,0,0)
         }
 
