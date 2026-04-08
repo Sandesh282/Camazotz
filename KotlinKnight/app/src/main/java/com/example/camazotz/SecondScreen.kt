@@ -2,6 +2,7 @@ package com.example.camazotz
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.camazotz.ThirdScreen
@@ -19,6 +20,7 @@ class SecondScreen : AppCompatActivity(){
         val image7 = findViewById<ImageView>(R.id.imageView8)
         val image8 = findViewById<ImageView>(R.id.imageView9)
         val image9 = findViewById<ImageView>(R.id.imageView10)
+
 
         image.setOnClickListener {
             openBook(
@@ -109,10 +111,13 @@ class SecondScreen : AppCompatActivity(){
         intent.putExtra("Price", price)
         intent.putExtra("IMAGE", image)
         startActivity(intent)
+
+
+        }
     }
 
 
-}
+
 
 
 
