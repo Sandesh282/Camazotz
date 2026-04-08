@@ -22,7 +22,6 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
             >
 
             <LinearLayout
@@ -30,7 +29,6 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical"
                 android:gravity="center"
-                app:cardBackgroundColor="@color/black"
                 >
 
                 <TextView
@@ -55,7 +53,6 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
 
             >
 
@@ -88,7 +85,6 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
 
             >
             <LinearLayout
@@ -120,7 +116,6 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
 
             >
 
@@ -153,7 +148,6 @@
             android:layout_height="300dp"
             android:layout_margin="40dp"
             android:gravity="center"
-            app:cardBackgroundColor="@color/black"
 
             >
 
@@ -184,7 +178,6 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
 
             >
 
@@ -216,7 +209,6 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
 
             >
             <LinearLayout
@@ -247,7 +239,6 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_margin="40dp"
-            app:cardBackgroundColor="@color/black"
 
             >
             <LinearLayout
