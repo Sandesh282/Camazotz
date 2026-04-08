@@ -24,7 +24,6 @@ class LoginPage : AppCompatActivity() {
             finish()
         }
 
-        val mediaPlayer = MediaPlayer.create(this,R.raw.lala)
-        mediaPlayer.start()
+
     }
 }
