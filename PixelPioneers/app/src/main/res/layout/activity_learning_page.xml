@@ -10,45 +10,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="30dp"
         android:gravity="center">
-        <Button
-            android:id="@+id/u78326e873y3h9"
-            android:layout_width="100dp"
-            android:layout_height="40dp"
-            android:layout_marginBottom="50dp"
-            android:text="ENTER"
-            android:paddingBottom="10dp"></Button>
-        <Button
-            android:id="@+id/ui3ipoqio30"
-            android:layout_width="300dp"
-            android:layout_height="55dp"
-            android:layout_marginBottom="2dp"
-            android:text="START PRACTICING "
-            android:textAlignment="center"></Button>
+
 
         <androidx.cardview.widget.CardView
-            android:layout_width="300dp"
-            android:layout_marginTop="4px"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
             android:layout_height="350dp"
             app:cardCornerRadius="20dp">
 
             <TextView
-                android:id="@+id/ud2uhiuh29"
+                android:id="@+id/learningtv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:text=""/>
 
         </androidx.cardview.widget.CardView>
-        <EditText
-            android:id="@+id/y74928989h"
-            android:layout_width="400dp"
-            android:layout_height="40dp"
-            android:layout_marginTop="60dp"
-            android:hint="ENTER YOUR OPERATOR ">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/operatoret"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="ENTER YOUR OPERATOR ">
+            </EditText>
+        </com.google.android.material.textfield.TextInputLayout>
+        <Button
+            android:id="@+id/enterbtn"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:text="ENTER" />
+
+        <Button
+            android:id="@+id/practicebtn"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_height="55dp"
+            android:layout_marginBottom="50dp"
+            android:text="START PRACTICING "
+            android:textAlignment="center" />
 
 
-        </EditText>
 
 
     </LinearLayout>

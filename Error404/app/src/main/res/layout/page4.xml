@@ -9,16 +9,16 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/main"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/bg">
+        android:layout_height="wrap_content">
 
         <TextView
             android:id="@+id/tv_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="229dp"
+            android:layout_height="56dp"
             android:layout_marginTop="25dp"
             android:background="@color/black"
             android:text="Profile Setup"
+            android:gravity="center"
             android:textColor="@color/red"
             android:textSize="37sp"
             android:textStyle="bold"
@@ -44,96 +44,104 @@
             android:id="@+id/cl_profile_card_container"
             android:layout_width="364dp"
             android:layout_height="464dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="4dp"
-            android:rotation="39047"
-            android:layout_marginEnd="24dp"
             android:background="@color/grey"
             android:paddingHorizontal="20dp"
             android:paddingTop="40dp"
             android:paddingBottom="15dp"
+            android:rotation="0"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_subtitle">
+            app:layout_constraintTop_toBottomOf="@+id/tv_title"
+            tools:ignore="MissingConstraints">
 
-            <!-- Circular profile image with placeholder -->
 
-            <TextView
-                android:id="@+id/tv_label_name"
-                android:layout_width="192dp"
-                android:layout_height="47dp"
-                android:layout_marginTop="24dp"
-                android:drawablePadding="10dp"
-                android:padding="5dp"
-                android:text="Saaffiginnittarfik nr."
-                android:textColor="@color/black"
-                android:textSize="29sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profileImage"
-                tools:ignore="NotSibling" />
+            <!--            <TextView-->
+            <!--                android:id="@+id/tv_label_name"-->
+            <!--                android:layout_width="192dp"-->
+            <!--                android:layout_height="47dp"-->
+            <!--                android:layout_marginTop="16dp"-->
+            <!--                android:drawablePadding="10dp"-->
+            <!--                android:padding="5dp"-->
+            <!--                android:text="Username"-->
+            <!--                android:textColor="@color/black"-->
+            <!--                android:textSize="29sp"-->
+            <!--                android:textStyle="bold"-->
+            <!--                app:layout_constraintTop_toBottomOf="@+id/profileImage"-->
+            <!--                tools:ignore="NotSibling"-->
+            <!--                tools:layout_editor_absoluteX="-3dp" />-->
 
             <EditText
                 android:id="@+id/etName"
-                android:layout_width="0dp"
+                android:layout_width="324dp"
                 android:layout_height="56dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/bg"
                 android:hint="sonot krus re"
                 android:inputType="phone"
-                android:rotation="5678"
                 android:paddingHorizontal="16dp"
+                android:rotation="0"
                 android:textColor="@color/red"
                 android:textColorHint="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_label_name" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_label_email"
+                app:layout_constraintVertical_bias="0.375" />
 
             <TextView
                 android:id="@+id/tv_label_email"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_width="319dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="24dp"
                 android:drawablePadding="10dp"
                 android:padding="5dp"
-                android:text="kontakto numero"
-                android:rotation="39"
+                android:rotation="0"
+                android:text="Contact Number"
                 android:textColor="@color/black"
                 android:textSize="20dp"
-                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/etName"
+                app:layout_constraintTop_toBottomOf="@+id/etEmail"
                 tools:ignore="HardcodedText" />
 
             <EditText
                 android:id="@+id/etEmail"
-                android:layout_width="0dp"
+                android:layout_width="324dp"
                 android:layout_height="56dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="44dp"
                 android:autofillHints="no"
-                android:rotation="79"
-                android:background="@drawable/bg"
-                android:hint="введите свое полное имя"
+                android:hint="Enter Your Full Name"
                 android:inputType="textAutoCorrect"
                 android:padding="18dp"
                 android:paddingHorizontal="16dp"
+                android:rotation="0"
                 android:textColor="@color/red"
                 android:textColorHint="@color/black"
                 android:textSize="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_label_email"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage"
                 tools:ignore="HardcodedText,VisualLintTextFieldSize" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileImage"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnReject"
-            android:layout_width="118dp"
-            android:layout_height="65dp"
-            android:layout_marginTop="500dp"
-            android:background="@color/yellow"
+            android:layout_width="185dp"
+            android:layout_height="67dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/red"
             android:fontFamily="sans-serif-medium"
             android:padding="18dp"
             android:text="Reject"
@@ -141,36 +149,34 @@
             android:textAllCaps="false"
             android:textColor="@android:color/black"
             android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnSave"
-            app:layout_constraintEnd_toStartOf="@+id/btnSave"
-            app:layout_constraintTop_toTopOf="@+id/cl_profile_card_container"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintEnd_toStartOf="@+id/btnAccept"
+            app:layout_constraintHorizontal_bias="0.795"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container"
             tools:ignore="HardcodedText,VisualLintButtonSize" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnCancel"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginStart="104dp"
-            android:layout_marginTop="468dp"
-            android:background="@color/violet"
-            android:fontFamily="sans-serif-medium"
-            android:padding="18dp"
-            android:text="Cancel"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
-            app:layout_constraintBottom_toBottomOf="@+id/btnSave"
-            app:layout_constraintStart_toEndOf="@+id/btnSave"
-            app:layout_constraintTop_toTopOf="@+id/cl_profile_card_container"
-            tools:ignore="HardcodedText,VisualLintButtonSize" />
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btnCancel"-->
+<!--            android:layout_width="181dp"-->
+<!--            android:layout_height="66dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:background="@color/violet"-->
+<!--            android:fontFamily="sans-serif-medium"-->
+<!--            android:padding="18dp"-->
+<!--            android:text="Cancel"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btnReject"-->
+<!--            tools:ignore="HardcodedText,VisualLintButtonSize" />-->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAccept"
-            android:layout_width="0dp"
+            android:layout_width="171dp"
             android:layout_height="64dp"
-            android:layout_marginTop="68dp"
+            android:layout_marginEnd="28dp"
             android:background="@color/green"
             android:fontFamily="sans-serif-medium"
             android:padding="18dp"
@@ -179,35 +185,28 @@
             android:textAllCaps="false"
             android:textColor="@android:color/black"
             android:textSize="25sp"
-            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container"
+            app:layout_constraintEnd_toEndOf="parent"
             tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-            tools:layout_editor_absoluteX="200dp" />
+            tools:layout_editor_absoluteY="549dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConfirm"
-            android:layout_width="0dp"
-            android:layout_height="64dp"
-            android:layout_marginTop="4dp"
-            android:background="@color/blue"
+            android:layout_width="363dp"
+            android:layout_height="66dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@color/violet"
             android:fontFamily="sans-serif-medium"
             android:padding="18dp"
             android:text="Confirm"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="#4DB6AC"
+            android:textColor="#090909"
             android:textSize="25sp"
-            app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container"
-            tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize"
-            tools:layout_editor_absoluteX="78dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.161"
+            app:layout_constraintTop_toBottomOf="@+id/btnAccept"
+            tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize" />
 
-        <com.google.android.material.imageview.ShapeableImageView
-            android:id="@+id/profileImage"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/img"
-            tools:layout_editor_absoluteX="311dp"
-            tools:layout_editor_absoluteY="68dp"
-            tools:ignore="MissingConstraints" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

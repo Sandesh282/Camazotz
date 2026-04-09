@@ -16,37 +16,45 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.ajbjhbdlbduibdiubi.setOnClickListener {
-            val intent = Intent(this, SplashActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
-        val oper = binding.y2y3273ygq87rfbq.text.toString()
+        val oper = binding.operator.text.toString()
 
 
-        binding.hddguruyghivh.setOnClickListener {
-            val op1 = binding.gyyiuwhuihiu12.text.toString()
-            val op2 = binding.gyyiuwhuihiv12.text.toString()
+        binding.equalbtn.setOnClickListener {
+            val op1 = binding.firstnum.text.toString()
+            val op2 = binding.secondnum.text.toString()
+            val oper = binding.operator.text.toString()
         Log.d("Hello",op1)
 
         Log.d("Hello","Hello")
-        if(op1.isNotEmpty() && op2.isNotEmpty()) {
-            val opp1 = op1.toInt()
-            val opp2 = op2.toInt()
-            Log.d("Hello", "Hello2")
-            val results = when (oper) {
-                "+" -> opp1 * opp2
-                "-" -> opp1 + opp2
-                "*" -> if (opp2 != 0) opp1 / opp2 else "invalid"
-                "/" -> opp1 % opp2
-                else -> "invalid operator"
+        if(op1.isNotEmpty() && op2.isNotEmpty() && oper.isNotEmpty()) {
+            val num1 = op1.toInt()
+            val num2 = op2.toInt()
+            if(num1 == null || num2 == null){
+                Toast.makeText(this, "Invalid number input", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
             }
-            Log.d("Hello", results.toString())
-            val toast = Toast.makeText(this, results.toString(), Toast.LENGTH_SHORT)
-            toast.show()
+            val results = when (oper) {
+                "+" -> num1 + num2
+                "-" -> num1 - num2
+                "*" -> num1 * num2
+                "/" -> if (num2 != 0){ num1 / num2}
+                else {
+                    Toast.makeText(this, "Invalid number input", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+                else -> {
+                    Toast.makeText(this, "Invalid operator", Toast.LENGTH_SHORT).show()
+                    return@setOnClickListener
+                }
+            }
+            binding.resulttv.text = results.toString()
+        } else {
+            Toast.makeText(this, "Please enter all fields", Toast.LENGTH_SHORT).show()
         }
+
         }
-        binding.y93809109fj0n0.setOnClickListener {
+
+        binding.startlearningbutton.setOnClickListener {
             val intent = Intent(this, LearningPage::class.java)
             startActivity(intent)
             finish()
