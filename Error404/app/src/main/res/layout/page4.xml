@@ -155,22 +155,22 @@
             app:layout_constraintTop_toBottomOf="@+id/cl_profile_card_container"
             tools:ignore="HardcodedText,VisualLintButtonSize" />
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnCancel"
-            android:layout_width="181dp"
-            android:layout_height="66dp"
-            android:layout_marginStart="24dp"
-            android:background="@color/violet"
-            android:fontFamily="sans-serif-medium"
-            android:padding="18dp"
-            android:text="Cancel"
-            android:textAlignment="center"
-            android:textAllCaps="false"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnReject"
-            tools:ignore="HardcodedText,VisualLintButtonSize" />
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/btnCancel"-->
+<!--            android:layout_width="181dp"-->
+<!--            android:layout_height="66dp"-->
+<!--            android:layout_marginStart="24dp"-->
+<!--            android:background="@color/violet"-->
+<!--            android:fontFamily="sans-serif-medium"-->
+<!--            android:padding="18dp"-->
+<!--            android:text="Cancel"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@android:color/black"-->
+<!--            android:textSize="25sp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/btnReject"-->
+<!--            tools:ignore="HardcodedText,VisualLintButtonSize" />-->
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnAccept"
@@ -191,20 +191,20 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnConfirm"
-            android:layout_width="175dp"
-            android:layout_height="64dp"
+            android:layout_width="363dp"
+            android:layout_height="66dp"
             android:layout_marginTop="8dp"
-            android:background="@color/blue"
+            android:layout_marginEnd="24dp"
+            android:background="@color/violet"
             android:fontFamily="sans-serif-medium"
             android:padding="18dp"
             android:text="Confirm"
             android:textAlignment="center"
             android:textAllCaps="false"
-            android:textColor="#4DB6AC"
+            android:textColor="#090909"
             android:textSize="25sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.161"
-            app:layout_constraintStart_toEndOf="@+id/btnCancel"
             app:layout_constraintTop_toBottomOf="@+id/btnAccept"
             tools:ignore="HardcodedText,MissingConstraints,VisualLintButtonSize" />
 
